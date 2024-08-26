@@ -60,10 +60,10 @@ function Header({ onMenuClick, onToggleSidebar }) {
             />
           </div>
           <InputBase
-            placeholder="Search apps, games, movies, and more"
+            placeholder="Search Your AI"
             className={`w-full pl-10 pr-3 py-2 border rounded-md ${
-              darkMode ? "bg-gray-700 text-white" : "bg-gray-100 text-gray-800"
-            }`}
+                darkMode ? "bg-gray-700 text-white placeholder:text-gray-400" : "bg-gray-100 text-gray-800 placeholder:text-gray-600"
+              }`}
             inputProps={{ "aria-label": "search" }}
           />
         </div>
