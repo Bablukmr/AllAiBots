@@ -13,12 +13,12 @@ import DataObjectIcon from "@mui/icons-material/DataObject";
 import InsightsIcon from "@mui/icons-material/Insights";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
+import SettingsIcon from '@mui/icons-material/Settings';
 
 function Sidebar({ isCollapsed, onToggleSidebar }) {
   const darkMode = true; // Replace this with actual theme detection logic
 
   const menuItems = [
-    { icon: <PersonIcon />, label: "My Space" },
     { icon: <HomeIcon />, label: "Home" },
     { icon: <MemoryIcon />, label: "AI Models" },
     { icon: <DataObjectIcon />, label: "Datasets" },
@@ -29,6 +29,7 @@ function Sidebar({ isCollapsed, onToggleSidebar }) {
     { icon: <MovieIcon />, label: "AI Movies" },
     { icon: <SportsSoccerIcon />, label: "AI in Sports" },
     { icon: <CategoryIcon />, label: "Categories" },
+    { icon: <SettingsIcon />, label: "Setting" },
   ];
 
   return (
