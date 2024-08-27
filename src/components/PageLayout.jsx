@@ -48,7 +48,7 @@ function PageLayout() {
         onToggleSidebar={toggleSidebar}
       />
 
-      <div className="flex flex-grow overflow-hidden mt-[1px]">
+      <div className="flex flex-grow overflow-hidden ">
         {!isMobile && (
           <Sidebar
             darkMode={darkMode}
