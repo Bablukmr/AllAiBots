@@ -73,7 +73,7 @@ function PageLayout() {
           </Drawer>
         )}
         <div
-          className={`flex-grow w-screen flex flex-col overflow-y-auto ${
+          className={`flex-grow w-screen flex flex-col overflow-y-auto overflow-x-hidden ${
             darkMode ? "bg-gray-800 text-white" : "bg-white text-gray-800"
           }`}
         >
