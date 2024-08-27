@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
@@ -7,8 +7,7 @@ import Typography from "@mui/material/Typography";
 import SearchIcon from "@mui/icons-material/Search";
 import InputBase from "@mui/material/InputBase";
 
-function Header({ onMenuClick, onToggleSidebar }) {
-  const darkMode = true;
+function Header({ onMenuClick, onToggleSidebar, darkMode }) {
   return (
     <div
       position="static"
@@ -62,8 +61,10 @@ function Header({ onMenuClick, onToggleSidebar }) {
           <InputBase
             placeholder="Search Your AI"
             className={`w-full pl-10 pr-3 py-2 border rounded-md ${
-                darkMode ? "bg-gray-700 text-white placeholder:text-gray-400" : "bg-gray-100 text-gray-800 placeholder:text-gray-600"
-              }`}
+              darkMode
+                ? "bg-gray-700 text-white placeholder:text-gray-400"
+                : "bg-gray-100 text-gray-800 placeholder:text-gray-600"
+            }`}
             inputProps={{ "aria-label": "search" }}
           />
         </div>

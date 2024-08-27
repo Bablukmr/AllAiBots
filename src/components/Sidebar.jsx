@@ -12,8 +12,8 @@ import CategoryIcon from "@mui/icons-material/Category";
 import SettingsIcon from "@mui/icons-material/Settings";
 import { useNavigate, useLocation } from "react-router-dom";
 
-function Sidebar({ isCollapsed, onToggleSidebar }) {
-  const darkMode = true; // Replace this with actual theme detection logic
+function Sidebar({ isCollapsed, onToggleSidebar,darkMode }) {
+  // const darkMode = true; // Replace this with actual theme detection logic
   const navigate = useNavigate();
   const location = useLocation();
 
