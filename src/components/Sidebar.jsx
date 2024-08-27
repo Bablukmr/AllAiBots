@@ -38,7 +38,7 @@ function Sidebar({ isCollapsed, onToggleSidebar }) {
         darkMode ? "bg-gray-800 text-white" : "bg-white text-gray-800"
       } ${isCollapsed ? "w-[70px]" : "w-56"}`}
     >
-      <ul className="space-y-4">
+      <ul className="space-y-3">
         {menuItems.map((item, index) => (
           <li
             key={index}
