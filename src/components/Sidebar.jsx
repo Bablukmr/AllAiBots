@@ -44,7 +44,7 @@ function Sidebar({ isCollapsed, onToggleSidebar,darkMode }) {
             <li
               key={index}
               onClick={() => navigate(item.to)}
-              className={`flex items-center space-x-3 p-2 rounded-lg cursor-pointer transform transition-all duration-300 ease-in-out ${
+              className={`flex items-center space-x-3 p-2 rounded-lg hover:text-white cursor-pointer transform transition-all duration-300 ease-in-out ${
                 isActive ? "bg-gray-700 scale-105 shadow-lg" : "hover:bg-gray-700 hover:scale-105 hover:shadow-lg"
               }`}
             >
@@ -59,8 +59,8 @@ function Sidebar({ isCollapsed, onToggleSidebar,darkMode }) {
               </span>
               {!isCollapsed && (
                 <span
-                  className={`text-base font-normal transition-opacity duration-300 ${
-                    isActive ? "font-semibold" : ""
+                  className={`text-base font-normal  transition-opacity duration-300 ${
+                    isActive ? "font-semibold text-white" : ""
                   }`}
                 >
                   {item.label}
