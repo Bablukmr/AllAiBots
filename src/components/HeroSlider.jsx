@@ -86,7 +86,7 @@ const HeroSlider = ({ darkMode }) => {
               <h1 className="text-white text-4xl font-bold">{slide.title}</h1>
               <p className="text-white mt-4 text-lg">{slide.description}</p>
             </div>
-            <div className="absolute top-[200px] left-10 p-8 z-20">
+            <div className="absolute top-[230px] md:top-[200px] left-10 p-8 z-20">
               <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors flex items-center">
                 Explore More <FaArrowRight className="ml-2" />
               </button>
