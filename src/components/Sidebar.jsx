@@ -13,23 +13,24 @@ import DataObjectIcon from "@mui/icons-material/DataObject";
 import InsightsIcon from "@mui/icons-material/Insights";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import SettingsIcon from '@mui/icons-material/Settings';
+import SettingsIcon from "@mui/icons-material/Settings";
+import { useNavigate } from "react-router-dom";
 
 function Sidebar({ isCollapsed, onToggleSidebar }) {
   const darkMode = true; // Replace this with actual theme detection logic
-
+  const navigate = useNavigate();
   const menuItems = [
-    { icon: <HomeIcon />, label: "Home" },
-    { icon: <MemoryIcon />, label: "AI Models" },
-    { icon: <DataObjectIcon />, label: "Datasets" },
-    { icon: <InsightsIcon />, label: "Analytics" },
-    { icon: <CodeIcon />, label: "AI Tools" },
-    { icon: <SchoolIcon />, label: "AI Learning" },
-    { icon: <LiveTvIcon />, label: "AI in Media" },
-    { icon: <MovieIcon />, label: "AI Movies" },
-    { icon: <SportsSoccerIcon />, label: "AI in Sports" },
-    { icon: <CategoryIcon />, label: "Categories" },
-    { icon: <SettingsIcon />, label: "Setting" },
+    { icon: <HomeIcon />, label: "Home", to: "/" },
+    { icon: <MemoryIcon />, label: "AI Models", to: "/ai-models" },
+    { icon: <DataObjectIcon />, label: "Datasets", to: "/datasets" },
+    { icon: <InsightsIcon />, label: "Analytics", to: "/analytics" },
+    { icon: <CodeIcon />, label: "AI Tools", to: "/ai-tools" },
+    { icon: <SchoolIcon />, label: "AI Learning", to: "/ai-learning" },
+    { icon: <LiveTvIcon />, label: "AI in Media", to: "/ai-media" },
+    { icon: <MovieIcon />, label: "AI Movies", to: "/ai-movies" },
+    { icon: <SportsSoccerIcon />, label: "AI in Sports", to: "/ai-sports" },
+    { icon: <CategoryIcon />, label: "Categories", to: "/categories" },
+    { icon: <SettingsIcon />, label: "Setting", to: "/settings" },
   ];
 
   return (
@@ -41,12 +42,13 @@ function Sidebar({ isCollapsed, onToggleSidebar }) {
       <ul className="space-y-3">
         {menuItems.map((item, index) => (
           <li
+            onClick={()=>navigate(item.to)}
             key={index}
             className="flex items-center space-x-3 p-2 rounded-lg cursor-pointer transform transition-all duration-300 ease-in-out hover:bg-gray-700 hover:scale-105 hover:shadow-lg"
           >
             <span className="text-xl">{item.icon}</span>
             {!isCollapsed && (
-              <span className="text-lg font-medium transition-opacity duration-300">
+              <span className="text-base font-normal transition-opacity duration-300">
                 {item.label}
               </span>
             )}
