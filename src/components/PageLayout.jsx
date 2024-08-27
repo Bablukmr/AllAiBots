@@ -13,7 +13,7 @@ function PageLayout() {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
-  const isMobile = useMediaQuery("(max-width:1024px)");
+  const isMobile = useMediaQuery("(max-width:768px)");
 
   const toggleSidebar = () => {
     setIsSidebarCollapsed(!isSidebarCollapsed);
@@ -22,13 +22,23 @@ function PageLayout() {
   const handleDrawerToggle = () => {
     setIsMobileOpen(!isMobileOpen);
   };
-  const [darkMode, setDarkMode] = useState(
-    () => localStorage.getItem("theme") === "dark"
-  );
+
+  // Initialize dark mode state based on system preference or saved preference
+  const [darkMode, setDarkMode] = useState(() => {
+    const storedTheme = localStorage.getItem("theme");
+    if (storedTheme) {
+      return storedTheme === "dark";
+    } else {
+      return window.matchMedia("(prefers-color-scheme: dark)").matches;
+    }
+  });
+
+  // Update dark mode setting on theme change
   useEffect(() => {
     document.documentElement.classList.toggle("dark", darkMode);
     localStorage.setItem("theme", darkMode ? "dark" : "light");
   }, [darkMode]);
+
   return (
     <div className="flex flex-col h-screen">
       {/* Full-width Header */}
@@ -52,7 +62,7 @@ function PageLayout() {
             variant="temporary"
             open={isMobileOpen}
             onClose={handleDrawerToggle}
-            classes={{ paper: "bg-gray-800 text-white w-64 ml-2" }}
+            classes={{ paper: "bg-gray-800 text-white ml-0" }}
             ModalProps={{ keepMounted: true }}
           >
             <Sidebar
@@ -62,8 +72,11 @@ function PageLayout() {
             />
           </Drawer>
         )}
-        {/* ${darkMode ? "bg-gray-800 text-white" : "bg-white text-gray-800"} */}
-        <div className={`flex-grow w-screen flex flex-col ${darkMode ? "bg-gray-800 text-white" : "bg-white text-gray-800"} `}>
+        <div
+          className={`flex-grow w-screen flex flex-col overflow-y-auto ${
+            darkMode ? "bg-gray-800 text-white" : "bg-white text-gray-800"
+          }`}
+        >
           <Routes>
             <Route path="/" element={<HomePage darkMode={darkMode} />} />
             <Route

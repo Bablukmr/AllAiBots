@@ -18,7 +18,7 @@ function Header({ onMenuClick, onToggleSidebar, darkMode }) {
       <Toolbar className="flex justify-between">
         <div className="flex items-center">
           {/* Mobile view menu icon */}
-          <div className="block md:hidden">
+          <div className="block lg:hidden">
             <IconButton
               size="large"
               edge="start"
@@ -30,7 +30,7 @@ function Header({ onMenuClick, onToggleSidebar, darkMode }) {
             </IconButton>
           </div>
           {/* Desktop view sidebar toggle icon */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <IconButton
               size="large"
               edge="start"
