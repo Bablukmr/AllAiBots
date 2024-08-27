@@ -9,10 +9,11 @@ import InputBase from "@mui/material/InputBase";
 function Header({ onMenuClick, onToggleSidebar, darkMode }) {
   return (
     <div
-      position="static"
       className={`${
-        darkMode ? "bg-gray-800 text-white" : "bg-white text-gray-800"
-      }`}
+        darkMode
+          ? "bg-gradient-to-r from-gray-700 via-gray-800 to-gray-900 text-white animated-gradient-dark"
+          : "bg-gradient-to-r from-teal-400 via-blue-500 to-purple-600 text-gray-800 animated-gradient-light"
+      } px-4 py-1`}
     >
       <Toolbar className="flex justify-between">
         <div className="flex items-center">
@@ -60,7 +61,7 @@ function Header({ onMenuClick, onToggleSidebar, darkMode }) {
           </div>
           <InputBase
             placeholder="Search your AI"
-            className={`w-full pl-10 pr-3 py-2 rounded-full border-none shadow-sm focus:ring-2 focus:ring-blue-500 ${
+            className={`w-full pl-9 lg:pl-10 pr-3 py-2 rounded-full border-none shadow-sm focus:ring-2 focus:ring-blue-500 ${
               darkMode
                 ? "bg-gray-700 text-white placeholder:text-gray-400"
                 : "bg-gray-100 text-gray-800 placeholder:text-gray-600"

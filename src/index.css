@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes gradientAnimationLight {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes gradientAnimationDark {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .animated-gradient-light {
+    background-size: 200% 200%;
+    animation: gradientAnimationLight 5s ease infinite;
+  }
+  
+  .animated-gradient-dark {
+    background-size: 200% 200%;
+    animation: gradientAnimationDark 5s ease infinite;
+  }
+  
