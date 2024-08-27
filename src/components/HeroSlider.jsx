@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { FaArrowRight } from "react-icons/fa";
 
 const sliderContent = [
   {
@@ -36,7 +37,7 @@ const sliderContent = [
   },
 ];
 
-const HeroSlider = ({darkMode}) => {
+const HeroSlider = ({ darkMode }) => {
   const mainSliderRef = useRef(null);
   const thumbnailSliderRef = useRef(null);
 
@@ -86,8 +87,8 @@ const HeroSlider = ({darkMode}) => {
               <p className="text-white mt-4 text-lg">{slide.description}</p>
             </div>
             <div className="absolute top-[200px] left-10 p-8 z-20">
-              <button className="bg-white text-black px-4 py-2 mt-4 font-semibold rounded">
-                Explore More
+              <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors flex items-center">
+                Explore More <FaArrowRight className="ml-2" />
               </button>
             </div>
           </div>
