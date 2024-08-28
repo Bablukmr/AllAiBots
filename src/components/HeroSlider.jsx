@@ -65,12 +65,12 @@ const HeroSlider = ({ darkMode }) => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 700,
+    speed: 6000,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 10000,
     asNavFor: thumbnailSliderRef.current,
     ref: mainSliderRef,
   };

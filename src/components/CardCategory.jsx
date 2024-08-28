@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { FaAnglesRight } from "react-icons/fa6";
 import { FaCaretRight, FaCaretLeft } from "react-icons/fa6";
 
-function CardCategory({mainTitle}) {
+function CardCategory({ mainTitle }) {
   const sliderRef = useRef(null);
 
   const sliderContent = [
@@ -61,7 +61,6 @@ function CardCategory({mainTitle}) {
       image: "/10.jpeg",
     },
   ];
-  
 
   const settings = {
     dots: false,
@@ -69,7 +68,7 @@ function CardCategory({mainTitle}) {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    arrows: false,  // Hide default arrows to use custom ones
+    arrows: false,
     responsive: [
       {
         breakpoint: 1024,
@@ -99,40 +98,44 @@ function CardCategory({mainTitle}) {
       <div className="w-full flex justify-between items-center">
         <Link
           to="/aa"
-          className="text-xl p-2 font-bold w-fit gap-1 flex items-center"
+          className="text-base md:text-xl p-2 font-bold w-fit gap-1 flex items-center"
         >
-        {mainTitle}  <FaAnglesRight />
+          {mainTitle} <FaAnglesRight />
         </Link>
         <div className="flex items-center gap-1 px-2">
-          <div
-            className="hover:cursor-pointer"
-            onClick={previous}
-          >
+          <div className="hover:cursor-pointer" onClick={previous}>
             <FaCaretLeft size={24} />
           </div>
-          <div
-            className="hover:cursor-pointer"
-            onClick={next}
-          >
+          <div className="hover:cursor-pointer" onClick={next}>
             <FaCaretRight size={24} />
           </div>
         </div>
       </div>
       <Slider ref={sliderRef} {...settings}>
         {sliderContent.map((val, index) => (
-          <div key={index} className="p-2">
-            <div className="relative group overflow-hidden rounded-lg shadow-lg">
+          <div
+            key={index}
+            className={`p-2 ${
+              index === 0 ? "transform-origin-left" : 
+              index === sliderContent.length - 1 ? "transform-origin-right" : 
+              "transform-origin-center"
+            }`}
+          >
+            <div className="relative group overflow-hidden rounded-lg shadow-lg transition-transform duration-[1.5s] transform hover:scale-125 hover:z-10">
               <img
                 src={val.image}
                 alt={val.title}
-                className="w-full h-64 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-64 object-cover rounded-lg transition-transform duration-[2s]"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-4 text-white transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+              <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-4 text-white transition-opacity duration-[2s] opacity-0 group-hover:opacity-100">
                 <h3 className="text-lg font-semibold">{val.title}</h3>
                 <p className="text-sm mt-2">{val.description}</p>
-                <button className="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
-                  Learn More
+                <button className="mt-3 mb-4 bg-blue-500 hover:bg-blue-600 w-fit text-white py-1 px-2 rounded">
+                  Explore
                 </button>
+              </div>
+              <div className="absolute bottom-4 left-4 text-white z-10 text-lg font-bold transition-opacity duration-[2s] opacity-100 group-hover:opacity-0">
+                {val.title}
               </div>
             </div>
           </div>

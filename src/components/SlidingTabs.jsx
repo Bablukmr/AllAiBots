@@ -18,7 +18,7 @@ const tabs = [
 const SlidingTabs = ({ darkMode }) => {
   const settings = {
     infinite: false,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 6,
     slidesToScroll: 2,
     responsive: [
@@ -59,10 +59,10 @@ const SlidingTabs = ({ darkMode }) => {
                   ? "bg-white text-black"
                   : "bg-gray-800 text-white"
                 : darkMode
-                ? "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white transition"
+                ? "bg-gray-600 text-gray-300 hover:bg-gray-700 hover:text-white transition"
                 : "bg-gray-200 text-black hover:bg-gray-300 transition"
             }`}
-            style={{ minWidth: "130px", marginRight: "10px" }} // Adjust min-width and gap as needed
+            style={{ minWidth: "130px", marginRight: "10px"}} // Adjust min-width and gap as needed
           >
             {tab}
           </div>
