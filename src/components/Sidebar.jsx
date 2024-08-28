@@ -33,11 +33,11 @@ function Sidebar({ isCollapsed, onToggleSidebar,darkMode }) {
 
   return (
     <div
-      className={`flex flex-col h-full p-4 transition-all duration-300 ease-in-out ${
+      className={`flex flex-col h-full p-4 overflow-y-auto transition-all duration-300 ease-in-out ${
         darkMode ? "bg-gray-800 text-white" : "bg-white text-gray-800"
       } ${isCollapsed ? "w-[70px]" : "w-56"}`}
     >
-      <ul className="space-y-3">
+      <ul className="space-y-3 ">
         {menuItems.map((item, index) => {
           const isActive = location.pathname === item.to;
           return (
