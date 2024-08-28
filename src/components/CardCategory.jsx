@@ -130,7 +130,7 @@ function CardCategory({ mainTitle }) {
               <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-4 text-white transition-opacity duration-[2s] opacity-0 group-hover:opacity-100">
                 <h3 className="text-lg font-semibold">{val.title}</h3>
                 <p className="text-sm mt-2">{val.description}</p>
-                <button className="mt-3 mb-4 bg-blue-500 hover:bg-blue-600 w-fit text-white py-1 px-2 rounded">
+                <button className="mt-3 mb-4 bg-blue-500 hover:bg-blue-600 w-fit hover:cursor-pointer text-white py-1 px-2 rounded">
                   Explore
                 </button>
               </div>
