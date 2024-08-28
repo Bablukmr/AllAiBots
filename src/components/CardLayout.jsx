@@ -8,29 +8,55 @@ const sliderContent = [
   {
     title: "AI Revolution",
     description: "Explore how AI is transforming industries across the globe.",
-    image: "/5.jpeg",
+    image: "/1.jpeg",
+  },
+  {
+    title: "AI and Automation",
+    description: "Discover the future of work with AI-driven automation.",
+    image: "/2.jpeg",
   },
   {
     title: "AI in Healthcare",
     description: "AI's impact on improving patient outcomes.",
-    image: "/1.jpeg",
+    image: "/3.jpeg",
   },
   {
     title: "AI in Education",
     description: "The future of personalized learning through AI.",
-    image: "/2.jpeg",
+    image: "/4.jpeg",
   },
   {
     title: "AI in Media",
     description: "AI's role in the evolution of media consumption.",
-    image: "/3.jpeg",
+    image: "/5.jpeg",
   },
   {
     title: "AI in Sports",
     description: "How AI is revolutionizing sports analytics.",
-    image: "/4.jpeg",
+    image: "/6.jpeg",
+  },
+  {
+    title: "AI in Retail",
+    description: "Enhancing customer experiences with AI in retail.",
+    image: "/7.jpeg",
+  },
+  {
+    title: "AI in Finance",
+    description: "AI's impact on financial decision-making and risk management.",
+    image: "/8.jpeg",
+  },
+  {
+    title: "AI in Transportation",
+    description: "Self-driving cars and the future of AI in transportation.",
+    image: "/9.jpeg",
+  },
+  {
+    title: "AI in Entertainment",
+    description: "AI's influence on content creation and entertainment.",
+    image: "/10.jpeg",
   },
 ];
+
 
 const CustomSlider = ({ darkMode }) => {
   const settings = {
