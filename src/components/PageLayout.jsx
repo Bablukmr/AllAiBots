@@ -6,6 +6,7 @@ import Drawer from "@mui/material/Drawer";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import HomePage from "../Pages/HomePage"; // Import your page components
 import Setting from "../Pages/Setting";
+import ToolPage from "../Pages/ToolPage";
 // import AIModelsPage from "./AIModelsPage"; // Import your page components
 // Add other page imports here
 
@@ -79,7 +80,7 @@ function PageLayout() {
         >
           <Routes>
             <Route path="/" element={<HomePage darkMode={darkMode} />} />
-            <Route path="/tool/*" element={<HomePage darkMode={darkMode} />} />
+            <Route path="/tool/*" element={<ToolPage darkMode={darkMode} />} />
             <Route
               path="/settings"
               element={

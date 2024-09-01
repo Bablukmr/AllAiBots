@@ -15,62 +15,62 @@ function CardCategory({ mainTitle }) {
       description:
         "Explore how AI is transforming industries across the globe.",
       image: "/1.jpeg",
-      url:"/ai-revolution"
+      url:"ai-revolution"
     },
     {
       title: "AI and Automation",
       description: "Discover the future of work with AI-driven automation.",
       image: "/2.jpeg",
-       url:"/ai-automation"
+       url:"ai-automation"
     },
     {
       title: "AI in Healthcare",
       description: "AI's impact on improving patient outcomes.",
       image: "/3.jpeg",
-      url:"/ai-healthcare"
+      url:"ai-healthcare"
     },
     {
       title: "AI in Education",
       description: "The future of personalized learning through AI.",
       image: "/4.jpeg",
-      url:"/ai-education"
+      url:"ai-education"
     },
     {
       title: "AI in Media",
       description: "AI's role in the evolution of media consumption.",
       image: "/5.jpeg",
-      url:"/ai-media"
+      url:"ai-media"
     },
     {
       title: "AI in Sports",
       description: "How AI is revolutionizing sports analytics.",
       image: "/6.jpeg",
-      url:"/ai-sports"
+      url:"ai-sports"
     },
     {
       title: "AI in Retail",
       description: "Enhancing customer experiences with AI in retail.",
       image: "/7.jpeg",
-       url:"/ai-retail"
+       url:"ai-retail"
     },
     {
       title: "AI in Finance",
       description:
         "AI's impact on financial decision-making and risk management.",
       image: "/8.jpeg",
-       url:"/ai-retail"
+       url:"ai-retail"
     },
     {
       title: "AI in Transportation",
       description: "Self-driving cars and the future of AI in transportation.",
       image: "/9.jpeg",
-       url:"/ai-transportation"
+       url:"ai-transportation"
     },
     {
       title: "AI in Entertainment",
       description: "AI's influence on content creation and entertainment.",
       image: "/10.jpeg",
-       url:"/ai-entertainment"
+       url:"ai-entertainment"
     },
   ];
 
@@ -145,7 +145,7 @@ function CardCategory({ mainTitle }) {
                 <h3 className="text-lg font-semibold">{val.title}</h3>
                 <p className="text-sm mt-2">{val.description}</p>
                 <button
-                  onClick={() => navigate(val.url)}
+                  onClick={() => navigate(`tool/${val.url}`)}
                   className="mt-3 mb-4 bg-blue-500 hover:bg-blue-600 w-fit hover:cursor-pointer text-white py-1 px-2 rounded"
                 >
                   Explore
