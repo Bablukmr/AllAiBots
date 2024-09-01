@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaArrowRight } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const sliderContent = [
   {
@@ -19,6 +20,7 @@ const sliderContent = [
     title: "AI in Healthcare",
     description: "AI's impact on improving patient outcomes.",
     image: "/3.jpeg",
+    url:"/healthcare"
   },
   {
     title: "AI in Education",
@@ -61,7 +63,7 @@ const sliderContent = [
 const HeroSlider = ({ darkMode }) => {
   const mainSliderRef = useRef(null);
   const thumbnailSliderRef = useRef(null);
-
+  const navigate=useNavigate()
   const settings = {
     dots: false,
     infinite: true,
@@ -108,7 +110,7 @@ const HeroSlider = ({ darkMode }) => {
               <p className="text-white mt-4 text-lg">{slide.description}</p>
             </div>
             <div className="absolute top-[230px] md:top-[200px] left-10 p-8 z-20">
-              <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors flex items-center">
+              <button onClick={()=>navigate(slide.url)} className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors flex items-center">
                 Explore More <FaArrowRight className="ml-2" />
               </button>
             </div>

@@ -12,8 +12,7 @@ import CategoryIcon from "@mui/icons-material/Category";
 import SettingsIcon from "@mui/icons-material/Settings";
 import { useNavigate, useLocation } from "react-router-dom";
 
-function Sidebar({ isCollapsed, onToggleSidebar,darkMode }) {
-  // const darkMode = true; // Replace this with actual theme detection logic
+function Sidebar({ isCollapsed, onToggleSidebar, darkMode }) {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -33,33 +32,31 @@ function Sidebar({ isCollapsed, onToggleSidebar,darkMode }) {
 
   return (
     <div
-      className={`flex flex-col items-center justify-center h-full p-4 overflow-y-auto transition-all duration-300 ease-in-out ${
+      className={`flex flex-col items-start h-full p-4 overflow-y-auto transition-all duration-300 ease-in-out sidebar-scrollbar ${
         darkMode ? "bg-gray-800 text-white" : "bg-white text-gray-800"
       } ${isCollapsed ? "w-[85px]" : "w-[224px]"}`}
     >
-      <ul className="space-y-3 ">
+      <ul className="space-y-3">
         {menuItems.map((item, index) => {
           const isActive = location.pathname === item.to;
           return (
             <li
               key={index}
               onClick={() => navigate(item.to)}
-              className={`flex items-center space-x-3  p-2 rounded-lg hover:text-white cursor-pointer transform transition-all duration-300 ease-in-out ${
+              className={`flex items-center space-x-3 p-2 rounded-lg hover:text-white cursor-pointer transform transition-all duration-300 ease-in-out ${
                 isActive ? "bg-gray-700 scale-105 shadow-lg" : "hover:bg-gray-700 hover:scale-105 hover:shadow-lg"
               }`}
             >
               <span
                 className={`text-xl transform transition-transform duration-500 ${
-                  isActive
-                    ? "scale-125 text-indigo-500 "
-                    : "hover:scale-110 hover:text-indigo-400"
+                  isActive ? "scale-125 text-indigo-500" : "hover:scale-110 hover:text-indigo-400"
                 }`}
               >
                 {item.icon}
               </span>
               {!isCollapsed && (
                 <span
-                  className={`text-base font-normal  transition-opacity duration-300 ${
+                  className={`text-base font-normal transition-opacity duration-300 ${
                     isActive ? "font-semibold text-white" : ""
                   }`}
                 >

@@ -79,6 +79,7 @@ function PageLayout() {
         >
           <Routes>
             <Route path="/" element={<HomePage darkMode={darkMode} />} />
+            <Route path="/tool/*" element={<HomePage darkMode={darkMode} />} />
             <Route
               path="/settings"
               element={
