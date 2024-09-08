@@ -8,6 +8,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/*" element={<PageLayout />} />
+        
       </Routes>
     </Router>
   );
