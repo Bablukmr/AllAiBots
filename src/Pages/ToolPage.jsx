@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
 
-function ToolPage({ darkMode }) {
-  const [rating, setRating] = useState(4.3);
+function ToolPage({ darkMode,toolData }) {
+  const [rating, setRating] = useState(toolData.rating);
   const [hover, setHover] = useState(null);
 
   return (
@@ -16,22 +16,45 @@ function ToolPage({ darkMode }) {
         className={`flex-none absolute top-0 lg:w-1/4 p-4 shadow-md rounded-lg mb-4 lg:mb-0 lg:mr-4 ${
           darkMode ? "bg-gray-800" : "bg-white"
         }`}
-        // style={{ position: "fixed", top: "0", height: "100%", overflow: "auto" }}
       >
         <div className="flex flex-col items-center">
           <img
-            src="/1.jpeg"
+            src={toolData.aiimage}
             alt="App Logo"
             className="w-[200px] h-[200px] mb-4"
           />
-          <h1 className="text-xl font-semibold mb-2">
-          AI Automation
-          </h1>
+          <h1 className="text-xl font-semibold mb-2">{toolData.title}</h1>
           <p className="text-gray-600 text-sm mb-4">Pango Inc.</p>
           <button className="bg-blue-500 text-white px-4 py-2 rounded-lg w-full">
             Get
           </button>
           <p className="text-gray-400 text-xs mt-2">Offers in-app purchases</p>
+        </div>
+        {/* Bottom Right Corner - Ratings Section */}
+        <div
+          className="mt-2 p-4 bg-gray-900 text-white rounded-lg shadow-md"
+          style={{ width: "250px" }}
+        >
+          <h3 className="text-xl font-semibold mb-2">Ratings and Reviews</h3>
+          <div className="flex items-center mb-4">
+            <span className="text-3xl font-bold">{toolData.rating}</span>
+            <span className="ml-2 text-gray-300">{toolData.totalRatings} Ratings</span>
+          </div>
+          <div>
+            {[5, 4, 3, 2, 1].map((stars, index) => (
+              <div key={index} className="flex items-center">
+                <span className="mr-2">{stars}★</span>
+                <div className="w-full bg-gray-600 rounded-full h-2.5">
+                  <div
+                    className={`h-2.5 bg-orange-500 rounded-full`}
+                    style={{
+                      width: toolData.ratingDistribution[stars] || "0%",
+                    }}
+                  ></div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -46,27 +69,16 @@ function ToolPage({ darkMode }) {
           {/* Preview and Description */}
           <div className="flex flex-col mb-6">
             <div className="flex mb-4">
-              <div className="w-1/2 p-2">
-                <img src="/4.jpeg" alt="Preview" className="rounded-lg" />
-              </div>
-              <div className="w-1/2 p-2">
-                <img src="/8.jpeg" alt="Preview" className="rounded-lg" />
-              </div>
+              {toolData.images.map((image, index) => (
+                <div key={index} className="w-1/2 p-2">
+                  <img src={image} alt={`Preview ${index + 1}`} className="rounded-lg" />
+                </div>
+              ))}
             </div>
             <h2 className="text-lg font-semibold mb-2">Description</h2>
-            <p className="text-gray-700 text-sm">
-              Hotspot Shield is the fastest VPN with unlimited secure internet
-              access for browsing, gaming, and enjoying video content! Whether
-              you are at home or on the go, you can stay safe online with
-              lightning-fast, secure & private internet security.
-            </p>
+            <p className="text-gray-700 text-sm">{toolData.description}</p>
             <br></br>
-            <p className="text-gray-700 text-sm">
-              Hotspot Shield is the fastest VPN with unlimited secure internet
-              access for browsing, gaming, and enjoying video content! Whether
-              you are at home or on the go, you can stay safe online with
-              lightning-fast, secure & private internet security.
-            </p>
+            <p className="text-gray-700 text-sm">{toolData.description2}</p>
           </div>
 
           {/* Ratings and Reviews */}
@@ -75,23 +87,23 @@ function ToolPage({ darkMode }) {
             <div className="flex items-center mb-4">
               <span className="text-2xl font-bold">{rating}</span>
               <span className="ml-2 text-gray-500">Average</span>
-              <span className="ml-2 text-gray-400">22K Ratings</span>
+              <span className="ml-2 text-gray-400">{toolData.totalRatings} Ratings</span>
             </div>
-            <div className="flex flex-col">
-              {/* Example Review */}
-              <div className="flex mb-4">
-                <div className="w-12 h-12 bg-gray-300 rounded-full"></div>
+
+            {/* Reviews */}
+            {toolData.reviews.map((review, index) => (
+              <div key={index} className="flex mb-4 mt-8">
+                <div className="w-12 h-12 bg-gray-300 rounded-full">
+                  <img src={review.userImage} alt="User" className="w-full h-full rounded-full" />
+                </div>
                 <div className="ml-4">
-                  <p className="font-semibold">User Name</p>
-                  <p className="text-sm text-gray-500">
-                    Review text goes here. This VPN is great for accessing
-                    blocked websites and playing banned games.
-                  </p>
+                  <p className="font-semibold">{review.username}</p>
+                  <p className="text-sm text-gray-500">{review.reviewText}</p>
                   <div className="flex mt-2">
-                    {[...Array(5)].map((star, index) => {
-                      const ratingValue = index + 1;
+                    {[...Array(5)].map((_, i) => {
+                      const ratingValue = i + 1;
                       return (
-                        <label key={index}>
+                        <label key={i}>
                           <input
                             type="radio"
                             name="rating"
@@ -116,8 +128,7 @@ function ToolPage({ darkMode }) {
                   </div>
                 </div>
               </div>
-              {/* Add more reviews here */}
-            </div>
+            ))}
           </div>
         </div>
       </div>

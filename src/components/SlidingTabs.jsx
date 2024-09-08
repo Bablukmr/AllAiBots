@@ -1,21 +1,7 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
 
-const tabs = [
-  "Home",
-  "AI Models",
-  "Datasets",
-  "Analytics",
-  "AI Tools",
-  "AI Learning",
-  "AI in Media",
-  "AI Movies",
-  "AI in Sports",
-  "Categories",
-  "Software development",
-];
-
-const SlidingTabs = ({ darkMode }) => {
+const SlidingTabs = ({ darkMode,tabs }) => {
   const settings = {
     infinite: false,
     speed: 1000,

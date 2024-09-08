@@ -5,62 +5,9 @@ import "slick-carousel/slick/slick-theme.css";
 import { FaArrowRight } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
-const sliderContent = [
-  {
-    title: "AI Revolution",
-    description: "Explore how AI is transforming industries across the globe.",
-    image: "/1.jpeg",
-  },
-  {
-    title: "AI and Automation",
-    description: "Discover the future of work with AI-driven automation.",
-    image: "/2.jpeg",
-  },
-  {
-    title: "AI in Healthcare",
-    description: "AI's impact on improving patient outcomes.",
-    image: "/3.jpeg",
-    url:"/healthcare"
-  },
-  {
-    title: "AI in Education",
-    description: "The future of personalized learning through AI.",
-    image: "/4.jpeg",
-  },
-  {
-    title: "AI in Media",
-    description: "AI's role in the evolution of media consumption.",
-    image: "/5.jpeg",
-  },
-  {
-    title: "AI in Sports",
-    description: "How AI is revolutionizing sports analytics.",
-    image: "/6.jpeg",
-  },
-  {
-    title: "AI in Retail",
-    description: "Enhancing customer experiences with AI in retail.",
-    image: "/7.jpeg",
-  },
-  {
-    title: "AI in Finance",
-    description: "AI's impact on financial decision-making and risk management.",
-    image: "/8.jpeg",
-  },
-  {
-    title: "AI in Transportation",
-    description: "Self-driving cars and the future of AI in transportation.",
-    image: "/9.jpeg",
-  },
-  {
-    title: "AI in Entertainment",
-    description: "AI's influence on content creation and entertainment.",
-    image: "/10.jpeg",
-  },
-];
 
 
-const HeroSlider = ({ darkMode }) => {
+const HeroSlider = ({ darkMode,sliderContent }) => {
   const mainSliderRef = useRef(null);
   const thumbnailSliderRef = useRef(null);
   const navigate=useNavigate()

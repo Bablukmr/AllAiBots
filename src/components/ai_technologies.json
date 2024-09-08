@@ -1,0 +1,347 @@
+{
+    "ai_technologies": [
+      {
+        "id": "1",
+        "category": "Natural Language Processing",
+        "title": "GPT-4",
+        "short_description": "A powerful language model that generates human-like text.",
+        "url": "/ai-learning/gpt-4",
+        "details_page": {
+          "description": "GPT-4 is the latest milestone in OpenAI’s effort in scaling up deep learning. With 175 billion parameters, GPT-4 generates text that is indistinguishable from human writing. This model is capable of understanding and generating text in a wide array of languages and styles. It can perform tasks like translation, summarization, question answering, and much more. GPT-4 has been trained on diverse datasets, making it highly versatile and robust in handling various types of natural language processing tasks.",
+          "images": [
+            "/1.jpeg",
+            "/2.jpeg",
+            "/3.jpeg",
+            "/4.jpeg",
+            "/5.jpeg"
+          ]
+        }
+      },
+      {
+        "id": "2",
+        "category": "Computer Vision",
+        "title": "DALL-E",
+        "short_description": "AI model that generates images from textual descriptions.",
+        "url": "/ai-learning/dall-e",
+        "details_page": {
+          "description": "DALL-E is an innovative AI model by OpenAI that creates images from textual descriptions. Named after Salvador Dalí and WALL·E, DALL-E can generate a wide range of images from complex prompts, showcasing creativity and versatility. It blends concepts, creates unique art styles, and generates images of non-existent objects, revolutionizing computer vision and creative AI.",
+          "images": [
+            "/2.jpeg",
+            "/1.jpeg",
+            "/3.jpeg",
+            "/4.jpeg",
+            "/5.jpeg"
+          ]
+        }
+      },
+      {
+        "id": "3",
+        "category": "Reinforcement Learning",
+        "title": "AlphaGo",
+        "short_description": "AI developed by DeepMind that plays the board game Go.",
+        "url": "/ai-learning/alpha-go",
+        "details_page": {
+          "description": "AlphaGo, developed by DeepMind, is an AI program designed to play the board game Go. It gained global recognition for defeating the world champion Go player. AlphaGo evaluates and predicts numerous possible moves using deep neural networks, showcasing the power of reinforcement learning in mastering complex games and strategic decision-making.",
+          "images": [
+            "/1.jpeg",
+            "/2.jpeg",
+            "/3.jpeg",
+            "/4.jpeg",
+            "/5.jpeg"
+          ]
+        }
+      },
+      {
+        "id": "4",
+        "category": "Speech Recognition",
+        "title": "Google Speech-to-Text",
+        "short_description": "Converts audio speech into text using Google's technology.",
+        "url": "/ai-learning/google-speech-to-text",
+        "details_page": {
+          "description": "Google Speech-to-Text is a service that uses Google's advanced machine learning models to convert audio speech into text. It supports a wide range of languages and can transcribe audio in real-time or from recorded files. The technology is used in various applications, including voice assistants, transcription services, and automated subtitling.",
+          "images": [
+            "/1.jpeg",
+            "/2.jpeg",
+            "/3.jpeg",
+            "/4.jpeg",
+            "/5.jpeg"
+          ]
+        }
+      },
+      {
+        "id": "5",
+        "category": "Computer Vision",
+        "title": "YOLOv5",
+        "short_description": "Real-time object detection model.",
+        "url": "/ai-learning/yolov5",
+        "details_page": {
+          "description": "YOLOv5 (You Only Look Once version 5) is an advanced real-time object detection model. It can detect and classify objects in images and videos with high accuracy and speed. YOLOv5 improves upon its predecessors with enhanced architecture and training techniques, making it suitable for a variety of applications from security systems to autonomous vehicles.",
+          "images": [
+            "/1.jpeg",
+            "/2.jpeg",
+            "/3.jpeg",
+            "/4.jpeg",
+            "/5.jpeg"
+          ]
+        }
+      },
+      {
+        "id": "6",
+        "category": "Natural Language Processing",
+        "title": "BERT",
+        "short_description": "Bidirectional Encoder Representations from Transformers model.",
+        "url": "/ai-learning/bert",
+        "details_page": {
+          "description": "BERT (Bidirectional Encoder Representations from Transformers) is a model developed by Google for natural language understanding. BERT processes text bidirectionally, allowing it to understand context more effectively than previous models. It has been widely adopted for tasks such as sentiment analysis, question answering, and language translation.",
+          "images": [
+            "/1.jpeg",
+            "/2.jpeg",
+            "/3.jpeg",
+            "/4.jpeg",
+            "/5.jpeg"
+          ]
+        }
+      },
+      {
+        "id": "7",
+        "category": "Reinforcement Learning",
+        "title": "OpenAI Gym",
+        "short_description": "Toolkit for developing and comparing reinforcement learning algorithms.",
+        "url": "/ai-learning/openai-gym",
+        "details_page": {
+          "description": "OpenAI Gym is a toolkit for developing and comparing reinforcement learning algorithms. It provides various environments for training reinforcement learning agents, ranging from classic control problems to complex simulations. Gym supports a wide range of environments and integrates with popular RL libraries, facilitating research and development in reinforcement learning.",
+          "images": [
+            "https://example.com/images/openai-gym-1.jpg",
+            "https://example.com/images/openai-gym-2.jpg",
+            "https://example.com/images/openai-gym-3.jpg",
+            "https://example.com/images/openai-gym-4.jpg",
+            "https://example.com/images/openai-gym-5.jpg"
+          ]
+        }
+      },
+      {
+        "id": "8",
+        "category": "Speech Recognition",
+        "title": "IBM Watson Speech to Text",
+        "short_description": "Service that converts audio and voice into written text.",
+        "url": "/ai-learning/ibm-watson-speech-to-text",
+        "details_page": {
+          "description": "IBM Watson Speech to Text is a service that converts audio and voice into written text using machine learning models. It supports multiple languages and can be used for various applications, including transcription, voice-activated commands, and real-time communication. The service is designed to handle noisy environments and diverse accents effectively.",
+          "images": [
+            "https://example.com/images/ibm-watson-speech-1.jpg",
+            "https://example.com/images/ibm-watson-speech-2.jpg",
+            "https://example.com/images/ibm-watson-speech-3.jpg",
+            "https://example.com/images/ibm-watson-speech-4.jpg",
+            "https://example.com/images/ibm-watson-speech-5.jpg"
+          ]
+        }
+      },
+      {
+        "id": "9",
+        "category": "Natural Language Processing",
+        "title": "T5",
+        "short_description": "Text-To-Text Transfer Transformer model by Google.",
+        "url": "/ai-learning/t5",
+        "details_page": {
+          "description": "T5 (Text-To-Text Transfer Transformer) is a model developed by Google that converts all text-based language problems into a text-to-text format. This unified approach simplifies the processing of various tasks such as translation, summarization, and question answering by treating them as text generation problems. T5 leverages large-scale pre-training to achieve state-of-the-art performance across a wide range of benchmarks.",
+          "images": [
+            "https://example.com/images/t5-1.jpg",
+            "https://example.com/images/t5-2.jpg",
+            "https://example.com/images/t5-3.jpg",
+            "https://example.com/images/t5-4.jpg",
+            "https://example.com/images/t5-5.jpg"
+          ]
+        }
+      },
+      {
+        "id": "10",
+        "category": "Computer Vision",
+        "title": "ResNet",
+        "short_description": "Deep residual learning framework for image recognition.",
+        "url": "/ai-learning/resnet",
+        "details_page": {
+          "description": "ResNet (Residual Networks) is a deep learning framework designed for image recognition. It introduces residual connections that allow gradients to flow through the network more effectively during training. This architecture addresses the vanishing gradient problem and enables the training of very deep networks, achieving state-of-the-art performance on image classification benchmarks.",
+          "images": [
+            "https://example.com/images/resnet-1.jpg",
+            "https://example.com/images/resnet-2.jpg",
+            "https://example.com/images/resnet-3.jpg",
+            "https://example.com/images/resnet-4.jpg",
+            "https://example.com/images/resnet-5.jpg"
+          ]
+        }
+      },
+      // Add 90+ more entries following the same structure
+      // Sample entries continued...
+      {
+        "id": "11",
+        "category": "Computer Vision",
+        "title": "VGGNet",
+        "short_description": "Convolutional neural network known for its depth.",
+        "url": "/ai-learning/vggnet",
+        "details_page": {
+          "description": "VGGNet is a convolutional neural network architecture known for its deep structure. Developed by the Visual Geometry Group at Oxford, VGGNet uses very small (3x3) convolution filters to achieve exceptional performance in image classification. Its simplicity and depth make it a popular choice for image recognition tasks and transfer learning.",
+          "images": [
+            "https://example.com/images/vggnet-1.jpg",
+            "https://example.com/images/vggnet-2.jpg",
+            "https://example.com/images/vggnet-3.jpg",
+            "https://example.com/images/vggnet-4.jpg",
+            "https://example.com/images/vggnet-5.jpg"
+          ]
+        }
+      },
+      {
+        "id": "12",
+        "category": "Natural Language Processing",
+        "title": "XLNet",
+        "short_description": "Generalized autoregressive pretraining model.",
+        "url": "/ai-learning/xlnet",
+        "details_page": {
+          "description": "XLNet is a generalized autoregressive pretraining model developed to improve language understanding. It builds upon the strengths of BERT and autoregressive models, capturing bidirectional context while also leveraging the power of autoregressive learning. XLNet achieves superior performance on a variety of NLP benchmarks, including sentiment analysis, translation, and question answering.",
+          "images": [
+            "https://example.com/images/xlnet-1.jpg",
+            "https://example.com/images/xlnet-2.jpg",
+            "https://example.com/images/xlnet-3.jpg",
+            "https://example.com/images/xlnet-4.jpg",
+            "https://example.com/images/xlnet-5.jpg"
+          ]
+        }
+      },
+      {
+        "id": "13",
+        "category": "Computer Vision",
+        "title": "Mask R-CNN",
+        "short_description": "Framework for object instance segmentation.",
+        "url": "/ai-learning/mask-rcnn",
+        "details_page": {
+          "description": "Mask R-CNN is a framework for object instance segmentation that extends Faster R-CNN by adding a branch for predicting segmentation masks. It can simultaneously detect objects and segment them at the pixel level. This model is widely used in applications requiring precise object boundaries, such as autonomous driving and medical image analysis.",
+          "images": [
+            "https://example.com/images/mask-rcnn-1.jpg",
+            "https://example.com/images/mask-rcnn-2.jpg",
+            "https://example.com/images/mask-rcnn-3.jpg",
+            "https://example.com/images/mask-rcnn-4.jpg",
+            "https://example.com/images/mask-rcnn-5.jpg"
+          ]
+        }
+      },
+      {
+        "id": "14",
+        "category": "Reinforcement Learning",
+        "title": "Deep Q-Network (DQN)",
+        "short_description": "Algorithm that combines Q-learning with deep neural networks.",
+        "url": "/ai-learning/deep-q-network",
+        "details_page": {
+          "description": "Deep Q-Network (DQN) is an algorithm that combines Q-learning with deep neural networks to handle high-dimensional state spaces. Developed by DeepMind, DQN has been successfully applied to various reinforcement learning tasks, including playing Atari games at a superhuman level. It uses experience replay and target networks to stabilize training and improve performance.",
+          "images": [
+            "https://example.com/images/dqn-1.jpg",
+            "https://example.com/images/dqn-2.jpg",
+            "https://example.com/images/dqn-3.jpg",
+            "https://example.com/images/dqn-4.jpg",
+            "https://example.com/images/dqn-5.jpg"
+          ]
+        }
+      },
+      {
+        "id": "15",
+        "category": "Natural Language Processing",
+        "title": "ALBERT",
+        "short_description": "A lite version of BERT for faster and more efficient training.",
+        "url": "/ai-learning/albert",
+        "details_page": {
+          "description": "ALBERT (A Lite BERT) is a variant of BERT designed to be more efficient while maintaining high performance. It reduces the size of the model by sharing parameters and decomposing the embedding layer, resulting in faster training and lower memory usage. ALBERT achieves competitive results on various NLP benchmarks, making it suitable for applications where computational resources are limited.",
+          "images": [
+            "https://example.com/images/albert-1.jpg",
+            "https://example.com/images/albert-2.jpg",
+            "https://example.com/images/albert-3.jpg",
+            "https://example.com/images/albert-4.jpg",
+            "https://example.com/images/albert-5.jpg"
+          ]
+        }
+      },
+      {
+        "id": "16",
+        "category": "Computer Vision",
+        "title": "Inception-v3",
+        "short_description": "Convolutional neural network for image classification.",
+        "url": "/ai-learning/inception-v3",
+        "details_page": {
+          "description": "Inception-v3 is a convolutional neural network architecture known for its efficiency and high performance in image classification tasks. It introduces the concept of 'inception modules,' which use multiple convolutional filters with different sizes to capture features at various scales. Inception-v3 achieves excellent results on image recognition benchmarks while maintaining a relatively low computational cost.",
+          "images": [
+            "https://example.com/images/inception-v3-1.jpg",
+            "https://example.com/images/inception-v3-2.jpg",
+            "https://example.com/images/inception-v3-3.jpg",
+            "https://example.com/images/inception-v3-4.jpg",
+            "https://example.com/images/inception-v3-5.jpg"
+          ]
+        }
+      },
+       {
+        "id": "17",
+        "category": "Natural Language Processing",
+        "title": "RoBERTa",
+        "short_description": "Robustly optimized BERT approach.",
+        "url": "/ai-learning/roberta",
+        "details_page": {
+          "description": "RoBERTa (Robustly optimized BERT approach) is an improved version of BERT developed by Facebook AI. It involves training BERT with more data and longer sequences, without the next sentence prediction objective. RoBERTa has shown superior performance on several NLP benchmarks, demonstrating that pre-training with larger corpora and extended training periods can lead to better language understanding.",
+          "images": [
+            "https://example.com/images/roberta-1.jpg",
+            "https://example.com/images/roberta-2.jpg",
+            "https://example.com/images/roberta-3.jpg",
+            "https://example.com/images/roberta-4.jpg",
+            "https://example.com/images/roberta-5.jpg"
+          ]
+        }
+      },
+      {
+        "id": "18",
+        "category": "Reinforcement Learning",
+        "title": "TRPO",
+        "short_description": "Trust Region Policy Optimization algorithm.",
+        "url": "/ai-learning/trpo",
+        "details_page": {
+          "description": "TRPO (Trust Region Policy Optimization) is a reinforcement learning algorithm designed to improve policy optimization by ensuring that updates to the policy do not deviate too much from the previous policy. This approach stabilizes training and leads to more reliable learning. TRPO is effective in high-dimensional action spaces and complex environments, making it a valuable tool for reinforcement learning research and applications.",
+          "images": [
+            "https://example.com/images/trpo-1.jpg",
+            "https://example.com/images/trpo-2.jpg",
+            "https://example.com/images/trpo-3.jpg",
+            "https://example.com/images/trpo-4.jpg",
+            "https://example.com/images/trpo-5.jpg"
+          ]
+        }
+      },
+      {
+        "id": "19",
+        "category": "Computer Vision",
+        "title": "EfficientNet",
+        "short_description": "Efficient model for image classification with improved accuracy.",
+        "url": "/ai-learning/efficientnet",
+        "details_page": {
+          "description": "EfficientNet is a family of convolutional neural networks designed to optimize accuracy and efficiency. By scaling up the network width, depth, and resolution systematically, EfficientNet achieves state-of-the-art performance on image classification benchmarks while using fewer parameters compared to traditional models. Its design principles and efficient use of resources make it suitable for deployment in resource-constrained environments.",
+          "images": [
+            "https://example.com/images/efficientnet-1.jpg",
+            "https://example.com/images/efficientnet-2.jpg",
+            "https://example.com/images/efficientnet-3.jpg",
+            "https://example.com/images/efficientnet-4.jpg",
+            "https://example.com/images/efficientnet-5.jpg"
+          ]
+        }
+      },
+      {
+        "id": "20",
+        "category": "Natural Language Processing",
+        "title": "ELECTRA",
+        "short_description": "Efficiently Learning an Encoder that Classifies Token Replacements.",
+        "url": "/ai-learning/electra",
+        "details_page": {
+          "description": "ELECTRA (Efficiently Learning an Encoder that Classifies Token Replacements) is a language model that improves upon BERT by using a replaced token detection objective instead of the traditional masked language model. This approach allows ELECTRA to achieve better performance with less training time and resources. It is effective for various NLP tasks, including text classification and named entity recognition.",
+          "images": [
+            "https://example.com/images/electra-1.jpg",
+            "https://example.com/images/electra-2.jpg",
+            "https://example.com/images/electra-3.jpg",
+            "https://example.com/images/electra-4.jpg",
+            "https://example.com/images/electra-5.jpg"
+          ]
+        }
+      }
+    ]
+  }
+  
