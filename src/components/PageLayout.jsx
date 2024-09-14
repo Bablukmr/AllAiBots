@@ -9,6 +9,7 @@ import Setting from "../Pages/Setting";
 import ToolPage from "../Pages/ToolPage";
 import AiModel from "../Pages/AiModel";
 import Footer from "./Footer";
+import Contact from "../Pages/Contact";
 // import AIModelsPage from "./AIModelsPage"; // Import your page components
 // Add other page imports here
 
@@ -125,13 +126,19 @@ function PageLayout() {
                 <Setting darkMode={darkMode} setDarkMode={setDarkMode} />
               }
             />
+            <Route
+              path="/contact"
+              element={
+                <Contact darkMode={darkMode} setDarkMode={setDarkMode} />
+              }
+            />
            
             {/* <Route path="/ai-models" element={<AIModelsPage />} />
                 <Route path="/datasets" element={<DatasetsPage />} />
                 // <Route path="/analytics" element={<AnalyticsPage />} /> */}
             {/* Add other routes here */}
           </Routes>
-          <Footer/>
+          {/* <Footer/> */}
         </div>
       </div>
     </div>
