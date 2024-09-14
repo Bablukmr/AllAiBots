@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { jsPDF } from "jspdf";
 import emailjs from "emailjs-com";
+import Swal from "sweetalert2"; // SweetAlert for notifications
 
 const Contact = ({ darkMode }) => {
   const [formData, setFormData] = useState({
@@ -15,11 +16,29 @@ const Contact = ({ darkMode }) => {
     email: "",
   });
 
+  const [errors, setErrors] = useState({});
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
+  };
+
+  // Simple form validation
+  const validateForm = () => {
+    let formErrors = {};
+    if (!formData.name) formErrors.name = "Name is required";
+    if (!formData.email) formErrors.email = "Email is required";
+    if (!formData.mobile) formErrors.mobile = "Mobile number is required";
+    if (!formData.address) formErrors.address = "Address is required";
+    if (!formData.city) formErrors.city = "City is required";
+    if (!formData.state) formErrors.state = "State is required";
+    if (!formData.zip) formErrors.zip = "ZIP code is required";
+    if (!formData.websiteType) formErrors.websiteType = "Website type is required";
+    setErrors(formErrors);
+
+    return Object.keys(formErrors).length === 0;
   };
 
   const generatePDF = () => {
@@ -42,6 +61,16 @@ const Contact = ({ darkMode }) => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    // Validate form before sending email
+    if (!validateForm()) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Please fill out all required fields!",
+      });
+      return;
+    }
+
     // Generate the PDF
     const pdfDoc = generatePDF();
     const pdfBase64 = pdfDoc.output("datauristring");
@@ -57,18 +86,24 @@ const Contact = ({ darkMode }) => {
     emailjs
       .send(
         "service_c42uylr", // EmailJS service ID
-        "template_hhb2o4i", // EmailJS template ID
+        "template_m30tg2b", // EmailJS template ID
         emailParams,
-        "your_user_id" // EmailJS user ID
+        "vVnjNAUj9-zKSbtOo" // EmailJS user ID
       )
       .then(
         (response) => {
-          console.log("SUCCESS!", response.status, response.text);
-          alert("Email sent successfully!");
+          Swal.fire({
+            icon: "success",
+            title: "Email Sent",
+            text: "Your email has been sent successfully!",
+          });
         },
         (err) => {
-          console.log("FAILED...", err);
-          alert("Failed to send the email.");
+          Swal.fire({
+            icon: "error",
+            title: "Failed",
+            text: "Failed to send the email. Please try again later.",
+          });
         }
       );
   };
@@ -94,6 +129,7 @@ const Contact = ({ darkMode }) => {
             onChange={handleChange}
             type="text"
           />
+          {errors.name && <p className="text-red-500">{errors.name}</p>}
         </div>
 
         <div className="mt-4">
@@ -108,6 +144,7 @@ const Contact = ({ darkMode }) => {
             onChange={handleChange}
             type="email"
           />
+          {errors.email && <p className="text-red-500">{errors.email}</p>}
         </div>
 
         <div className="mt-4">
@@ -122,6 +159,7 @@ const Contact = ({ darkMode }) => {
             onChange={handleChange}
             type="tel"
           />
+          {errors.mobile && <p className="text-red-500">{errors.mobile}</p>}
         </div>
 
         <div className="mt-4">
@@ -135,6 +173,7 @@ const Contact = ({ darkMode }) => {
             value={formData.address}
             onChange={handleChange}
           />
+          {errors.address && <p className="text-red-500">{errors.address}</p>}
         </div>
 
         <div className="mt-4 flex flex-row space-x-2">
@@ -150,6 +189,7 @@ const Contact = ({ darkMode }) => {
               onChange={handleChange}
               type="text"
             />
+            {errors.city && <p className="text-red-500">{errors.city}</p>}
           </div>
 
           <div className="flex-1">
@@ -164,6 +204,7 @@ const Contact = ({ darkMode }) => {
               onChange={handleChange}
               type="text"
             />
+            {errors.state && <p className="text-red-500">{errors.state}</p>}
           </div>
         </div>
 
@@ -180,6 +221,7 @@ const Contact = ({ darkMode }) => {
               onChange={handleChange}
               type="text"
             />
+            {errors.zip && <p className="text-red-500">{errors.zip}</p>}
           </div>
         </div>
 
@@ -205,6 +247,7 @@ const Contact = ({ darkMode }) => {
             <option value="personal">Personal Website</option>
             <option value="forum">Forum Website</option>
           </select>
+          {errors.websiteType && <p className="text-red-500">{errors.websiteType}</p>}
         </div>
 
         <div className="mt-4 flex justify-center">
