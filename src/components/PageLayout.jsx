@@ -41,6 +41,7 @@ function PageLayout() {
     document.documentElement.classList.toggle("dark", darkMode);
     localStorage.setItem("theme", darkMode ? "dark" : "light");
   }, [darkMode]);
+
   const toolData = {
     title: "AI Automation",
     aiimage: "/4.jpeg",
@@ -74,6 +75,7 @@ function PageLayout() {
       {/* Full-width Header */}
       <Header
         darkMode={darkMode}
+        setDarkMode={setDarkMode}
         onMenuClick={handleDrawerToggle}
         onToggleSidebar={toggleSidebar}
       />

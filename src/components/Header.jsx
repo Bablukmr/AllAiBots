@@ -5,8 +5,9 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Typography from "@mui/material/Typography";
 import SearchIcon from "@mui/icons-material/Search";
 import InputBase from "@mui/material/InputBase";
+import Switch from "./DarkButton";
 
-function Header({ onMenuClick, onToggleSidebar, darkMode }) {
+function Header({ onMenuClick, onToggleSidebar, darkMode,setDarkMode }) {
   return (
     <div
       className={`${
@@ -69,6 +70,7 @@ function Header({ onMenuClick, onToggleSidebar, darkMode }) {
             inputProps={{ "aria-label": "search" }}
           />
         </div>
+        <Switch darkMode={darkMode} setDarkMode={setDarkMode}/>
       </Toolbar>
     </div>
   );

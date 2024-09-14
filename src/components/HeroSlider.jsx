@@ -50,7 +50,7 @@ const HeroSlider = ({ darkMode, sliderContent }) => {
   };
 
   return (
-    <div className="relative mt-[1px] rounded-sm bottom-0 w-full h-[500px]">
+    <div className="relative mt-1 bottom-0 w-full h-[500px]">
       {/* Left Arrow */}
       <button
         className="absolute left-0 top-1/2 z-20 transform -translate-y-1/2 bg-gray-700 text-white p-3 rounded-full"

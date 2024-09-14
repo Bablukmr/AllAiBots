@@ -3,6 +3,7 @@ import HeroSlider from "../components/HeroSlider";
 import CustomSlider from "../components/CardLayout";
 import SlidingTabs from "../components/SlidingTabs";
 import CardCategory from "../components/CardCategory";
+import CardSlider from "../components/EsentialsTool";
 
 function HomePage({ darkMode }) {
   const sliderContent = [
@@ -193,8 +194,11 @@ function HomePage({ darkMode }) {
       <SlidingTabs darkMode={darkMode} tabs={tabs}></SlidingTabs>
       <CustomSlider sliderContent={sliderContents} darkMode={darkMode}></CustomSlider>
       <CardCategory CardsliderContent={CardsliderContent} mainTitle="Best AI Tool" />
+      <CardSlider/>
       <CardCategory CardsliderContent={CardsliderContent} mainTitle="Best AI For graphics" />
+      <CardSlider/>
       <CardCategory CardsliderContent={CardsliderContent} mainTitle="Best AI For Web Development" />
+      <CardSlider/>
     </div>
   );
 }
