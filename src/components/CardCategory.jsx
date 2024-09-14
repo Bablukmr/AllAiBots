@@ -1,15 +1,26 @@
 import React, { useRef } from "react";
 import Slider from "react-slick";
+import { Card, CardMedia, CardContent, Typography, Button, Box } from "@mui/material";
+import { styled } from "@mui/material/styles";
+import { Link, useNavigate } from "react-router-dom";
+import { FaAnglesRight, FaCaretRight, FaCaretLeft } from "react-icons/fa6";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Link, useNavigate } from "react-router-dom";
-import { FaAnglesRight } from "react-icons/fa6";
-import { FaCaretRight, FaCaretLeft } from "react-icons/fa6";
 
-function CardCategory({ mainTitle,CardsliderContent }) {
+// Styled MUI Card for hover animation
+const StyledCard = styled(Card)(({ theme }) => ({
+  // overflow: "hidden",
+  transition: "transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out",
+  "&:hover": {
+    transform: "scale(1.15)",
+    boxShadow: theme.shadows[6],
+  },
+}));
+
+function CardCategory({ mainTitle, CardsliderContent }) {
   const sliderRef = useRef(null);
   const navigate = useNavigate();
- 
+
   const settings = {
     dots: false,
     infinite: true,
@@ -42,8 +53,8 @@ function CardCategory({ mainTitle,CardsliderContent }) {
   };
 
   return (
-    <div className="slider-container mt-3">
-      <div className="w-full flex justify-between items-center">
+    <div className="slider-container mt-3 ">
+      <div className="w-full flex justify-between items-center mb-4">
         <Link
           to="/aa"
           className="text-base md:text-xl p-2 font-bold w-fit gap-1 flex items-center"
@@ -61,37 +72,33 @@ function CardCategory({ mainTitle,CardsliderContent }) {
       </div>
       <Slider ref={sliderRef} {...settings}>
         {CardsliderContent.map((val, index) => (
-          <div
-            key={index}
-            className={`p-2 ${
-              index === 0
-                ? "transform-origin-left"
-                : index === CardsliderContent.length - 1
-                ? "transform-origin-right"
-                : "transform-origin-center"
-            }`}
-          >
-            <div className="relative group overflow-hidden rounded-lg shadow-lg transition-transform duration-[1.5s] transform hover:scale-125 hover:z-10">
-              <img
-                src={val.image}
+          <Box key={index} sx={{ p: 1 }}>
+            <StyledCard>
+              <CardMedia
+                component="img"
+                height="250"
+                image={val.image}
                 alt={val.title}
-                className="w-full h-64 object-cover rounded-lg transition-transform duration-[2s]"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-4 text-white transition-opacity duration-[2s] opacity-0 group-hover:opacity-100">
-                <h3 className="text-lg font-semibold">{val.title}</h3>
-                <p className="text-sm mt-2">{val.description}</p>
-                <button
+              <CardContent sx={{ textAlign: "left" }} className="">
+                <Typography variant="h6" fontWeight="bold">
+                  {val.title}
+                </Typography>
+                <Typography variant="body2" color="text.secondary" gutterBottom>
+                  {val.description}
+                </Typography>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  size="small"
                   onClick={() => navigate(`${val.url}`)}
-                  className="mt-3 mb-4 bg-blue-500 hover:bg-blue-600 w-fit hover:cursor-pointer text-white py-1 px-2 rounded"
+                  sx={{ mt: 1 }}
                 >
                   Explore
-                </button>
-              </div>
-              <div className="absolute bottom-4 left-4 text-white z-10 text-lg font-bold transition-opacity duration-[2s] opacity-100 group-hover:opacity-0">
-                {val.title}
-              </div>
-            </div>
-          </div>
+                </Button>
+              </CardContent>
+            </StyledCard>
+          </Box>
         ))}
       </Slider>
     </div>
