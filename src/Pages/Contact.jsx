@@ -35,7 +35,8 @@ const Contact = ({ darkMode }) => {
     if (!formData.city) formErrors.city = "City is required";
     if (!formData.state) formErrors.state = "State is required";
     if (!formData.zip) formErrors.zip = "ZIP code is required";
-    if (!formData.websiteType) formErrors.websiteType = "Website type is required";
+    if (!formData.websiteType)
+      formErrors.websiteType = "Website type is required";
     setErrors(formErrors);
 
     return Object.keys(formErrors).length === 0;
@@ -43,7 +44,7 @@ const Contact = ({ darkMode }) => {
 
   const generatePDF = () => {
     const doc = new jsPDF();
-    
+
     doc.text("Proposal Form", 20, 20);
     doc.text(`Name: ${formData.name}`, 20, 30);
     doc.text(`Address: ${formData.address}`, 20, 40);
@@ -111,7 +112,9 @@ const Contact = ({ darkMode }) => {
   return (
     <div
       className={`mt-4 flex flex-col rounded-lg p-4 shadow-sm transition-all mx-[2%] md:mx-[10%] duration-300 ${
-        darkMode ? "bg-gray-900 text-white" : "bg-gray-300 text-black"
+        darkMode
+          ? "bg-gradient-to-r from-rose-400 to-red-500"
+          : "bg-gradient-to-r from-red-500 to-orange-500"
       }`}
     >
       <h2 className="font-bold text-lg">Proposal Form</h2>
@@ -150,6 +153,7 @@ const Contact = ({ darkMode }) => {
         <div className="mt-4">
           <label htmlFor="mobile">Mobile</label>
           <input
+          type="number"
             name="mobile"
             placeholder="Your mobile number"
             className={`w-full rounded-md px-2 py-1 transition-all duration-300 ${
@@ -247,11 +251,23 @@ const Contact = ({ darkMode }) => {
             <option value="personal">Personal Website</option>
             <option value="forum">Forum Website</option>
           </select>
-          {errors.websiteType && <p className="text-red-500">{errors.websiteType}</p>}
+          {errors.websiteType && (
+            <p className="text-red-500">{errors.websiteType}</p>
+          )}
         </div>
 
         <div className="mt-4 flex justify-center">
           <button
+           type="submit"
+            class="cursor-pointer transition-all bg-blue-500 text-white px-6 py-2 rounded-lg
+border-blue-600
+border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px]
+active:border-b-[2px] active:brightness-90 active:translate-y-[2px]"
+          >
+            Submit
+          </button>
+
+          {/* <button
             className={`rounded-md px-4 py-2 font-bold transition-all duration-300 ${
               darkMode
                 ? "bg-white text-black hover:bg-blue-500 hover:text-white"
@@ -260,7 +276,7 @@ const Contact = ({ darkMode }) => {
             type="submit"
           >
             Submit
-          </button>
+          </button> */}
         </div>
       </form>
     </div>

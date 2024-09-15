@@ -194,11 +194,11 @@ function HomePage({ darkMode }) {
       <SlidingTabs darkMode={darkMode} tabs={tabs}></SlidingTabs>
       <CustomSlider sliderContent={sliderContents} darkMode={darkMode}></CustomSlider>
       <CardCategory CardsliderContent={CardsliderContent} mainTitle="Best AI Tool" />
-      <CardSlider/>
+      <CardSlider darkMode={darkMode}/>
       <CardCategory CardsliderContent={CardsliderContent} mainTitle="Best AI For graphics" />
-      <CardSlider/>
+      <CardSlider darkMode={darkMode}/>
       <CardCategory CardsliderContent={CardsliderContent} mainTitle="Best AI For Web Development" />
-      <CardSlider/>
+      <CardSlider darkMode={darkMode}/>
     </div>
   );
 }
