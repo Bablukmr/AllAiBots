@@ -5,7 +5,7 @@ import SlidingTabs from "../components/SlidingTabs";
 import CardCategory from "../components/CardCategory";
 import CardSlider from "../components/EsentialsTool";
 
-function AiModel({ darkMode }) {
+function AiMovies({ darkMode }) {
     const sliderContent = [
         {
           title: "OpenAI GPT-4",
@@ -218,4 +218,4 @@ function AiModel({ darkMode }) {
   );
 }
 
-export default AiModel;
+export default AiMovies;

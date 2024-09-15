@@ -10,6 +10,14 @@ import ToolPage from "../Pages/ToolPage";
 import AiModel from "../Pages/AiModel";
 import Footer from "./Footer";
 import Contact from "../Pages/Contact";
+import Datasets from "../Pages/Datasets";
+import Analytics from "../Pages/Analytics";
+import AITools from "../Pages/AITools";
+import AiLearning from "../Pages/AiLearning";
+import AiMedia from "../Pages/AiMedia";
+import AiMovies from "../Pages/AiMovies";
+import AiSports from "../Pages/AiSports";
+import Categories from "../Pages/Categories";
 // import AIModelsPage from "./AIModelsPage"; // Import your page components
 // Add other page imports here
 
@@ -106,7 +114,7 @@ function PageLayout() {
           </Drawer>
         )}
         <div
-          className={`flex-grow w-screen flex flex-col overflow-y-auto overflow-x-hidden ${
+          className={`flex-grow w-screen pb-10 flex flex-col overflow-y-auto overflow-x-hidden ${
             darkMode ? "bg-gray-800 text-white" : "bg-white text-gray-800"
           }`}
         >
@@ -119,6 +127,38 @@ function PageLayout() {
             <Route
               path="/ai-models"
               element={<AiModel darkMode={darkMode} />}
+            />
+            <Route
+              path="/datasets"
+              element={<Datasets darkMode={darkMode} />}
+            />
+            <Route
+              path="/analytics"
+              element={<Analytics darkMode={darkMode} />}
+            />
+            <Route
+              path="/ai-tools"
+              element={<AITools darkMode={darkMode} />}
+            />
+            <Route
+              path="/ai-learning"
+              element={<AiLearning darkMode={darkMode} />}
+            />
+            <Route
+              path="/ai-media"
+              element={<AiMedia darkMode={darkMode} />}
+            />
+            <Route
+              path="/ai-movies"
+              element={<AiMovies darkMode={darkMode} />}
+            />
+            <Route
+              path="/ai-sports"
+              element={<AiSports darkMode={darkMode} />}
+            />
+            <Route
+              path="/categories"
+              element={<Categories darkMode={darkMode} />}
             />
             <Route
               path="/settings"

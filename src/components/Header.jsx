@@ -2,16 +2,14 @@ import React from "react";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import Typography from "@mui/material/Typography";
 import SearchIcon from "@mui/icons-material/Search";
 import InputBase from "@mui/material/InputBase";
-import Switch from "./DarkButton";
 import ButtonComponents from "./ButtonComponets";
 import DarkButtonSwich from "./DarkButton";
 import { useNavigate } from "react-router-dom";
 
 function Header({ onMenuClick, onToggleSidebar, darkMode, setDarkMode }) {
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   return (
     <div
       className={`${
@@ -47,15 +45,25 @@ function Header({ onMenuClick, onToggleSidebar, darkMode, setDarkMode }) {
               <MenuIcon />
             </IconButton>
           </div>
-          <Typography
-            variant="h6"
-            component="div"
-            className={`ml-4 font-canavar ${
-              darkMode ? "text-white" : "text-gray-800"
-            }`}
-          >
-            AllAiBots
-          </Typography>
+          <div className="flex items-center justify-center ">
+      {/* Logo Text */}
+      <div className="flex text-xl md:text-2xl font-bold">
+        {/* ALL */}
+        <span className="text-[#339AF0]">A</span>
+        <span className="text-[#339AF0]">L</span>
+        <span className="text-[#339AF0]">L</span>
+
+        {/* AI */}
+        <span className="text-[#C0392B] mx-1 md:mx-2">A</span>
+        <span className="text-[#C0392B]">I</span>
+
+        {/* BOTS */}
+        <span className="text-[#28B463] mx-1 md:mx-2">B</span>
+        <span className="text-[#28B463]">O</span>
+        <span className="text-[#28B463]">T</span>
+        <span className="text-[#28B463]">S</span>
+      </div>
+    </div>
         </div>
 
         {/* Middle Section - Search Bar */}
@@ -83,7 +91,7 @@ function Header({ onMenuClick, onToggleSidebar, darkMode, setDarkMode }) {
         {/* Right Section - Buttons and Switch */}
         <div className="flex items-center space-x-4">
           {/* Smaller Button for Mobile */}
-          <div onClick={()=>navigate("/contact")} className="hidden lg:block">
+          <div onClick={() => navigate("/contact")} className="hidden lg:block">
             <ButtonComponents darkMode={darkMode} />
           </div>
           {/* Dark Mode Toggle Button */}

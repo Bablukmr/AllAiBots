@@ -53,7 +53,7 @@ function CardCategory({ mainTitle, CardsliderContent }) {
   };
 
   return (
-    <div className="slider-container mt-3 ">
+    <div className="slider-container mt-3 py-6">
       <div className="w-full flex justify-between items-center mb-4">
         <Link
           to="/aa"
@@ -72,7 +72,7 @@ function CardCategory({ mainTitle, CardsliderContent }) {
       </div>
       <Slider ref={sliderRef} {...settings}>
         {CardsliderContent.map((val, index) => (
-          <Box key={index} sx={{ p: 1 }}>
+          <Box key={index} sx={{ p: 0.7 }} className="md:h-[500px]">
             <StyledCard>
               <CardMedia
                 component="img"
@@ -85,7 +85,7 @@ function CardCategory({ mainTitle, CardsliderContent }) {
                   {val.title}
                 </Typography>
                 <Typography variant="body2" color="text.secondary" gutterBottom>
-                  {val.description}
+                  {val.description.slice(0, 30)}...
                 </Typography>
                 <Button
                   variant="contained"
