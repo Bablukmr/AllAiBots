@@ -32,7 +32,7 @@ function Sidebar({ isCollapsed, onToggleSidebar, darkMode }) {
 
   return (
     <div
-      className={`flex flex-col items-start h-full p-4 overflow-y-auto transition-all duration-300 ease-in-out sidebar-scrollbar ${
+      className={`flex flex-col items-start h-full overflow-x-hidden p-4 overflow-y-auto transition-all duration-300 ease-in-out sidebar-scrollbar ${
         darkMode ? "bg-gray-800 text-white" : "bg-white text-gray-800"
       } ${isCollapsed ? "w-[85px]" : "w-[224px]"}`}
     >
