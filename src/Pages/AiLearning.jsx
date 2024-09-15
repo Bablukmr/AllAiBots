@@ -6,216 +6,211 @@ import CardCategory from "../components/CardCategory";
 import CardSlider from "../components/EsentialsTool";
 
 function AiLearning({ darkMode }) {
+    // Updated content for HeroSlider
     const sliderContent = [
         {
-          title: "OpenAI GPT-4",
-          description: "Explore how GPT-4 is advancing natural language understanding and generation.",
-          image: "/10.jpeg",
-          url: "/gpt4"
-        },
-        {
-          title: "Google BERT",
-          description: "Discover how BERT enhances search engine capabilities and contextual understanding.",
-          image: "/2.jpeg",
-          url: "/bert"
-        },
-        {
-          title: "IBM Watson",
-          description: "Learn about IBM Watson's applications in AI-driven business solutions.",
-          image: "/4.jpeg",
-          url: "/watson"
-        },
-        {
-          title: "DeepMind AlphaFold",
-          description: "Understand how AlphaFold is revolutionizing protein folding predictions.",
-          image: "/6.jpeg",
-          url: "/alphafold"
-        },
-        {
-          title: "Microsoft Azure AI",
-          description: "See how Azure AI tools are transforming cloud-based AI solutions.",
-          image: "/9.jpeg",
-          url: "/azure-ai"
-        },
-        {
-          title: "Amazon SageMaker",
-          description: "Explore SageMaker's capabilities for building, training, and deploying machine learning models.",
-          image: "/7.jpeg",
-          url: "/sagemaker"
-        },
-        {
-          title: "Hugging Face Transformers",
-          description: "Learn about the Transformers library and its impact on NLP tasks.",
-          image: "/2.jpeg",
-          url: "/transformers"
-        },
-        {
-          title: "OpenCV",
-          description: "Discover how OpenCV is used for computer vision applications and image processing.",
-          image: "/1.jpeg",
-          url: "/opencv"
-        },
-        {
-          title: "TensorFlow",
-          description: "Understand how TensorFlow is used for building and training machine learning models.",
-          image: "/9.jpeg",
-          url: "/tensorflow"
-        },
-        {
-          title: "PyTorch",
-          description: "See how PyTorch is enabling flexible and efficient deep learning research.",
-          image: "/6.jpeg",
-          url: "/pytorch"
-        }
-      ];
-      const tabs = [
-        
-        "AI Models",
-        "AI Tools",
-        "Datasets",
-        "Analytics",
-        "AI Research",
-        "Machine Learning",
-        "Natural Language Processing",
-        "Computer Vision",
-        "Deep Learning",
-        "AI Applications",
-        "AI in Media",
-        "AI in Healthcare",
-        "AI in Finance",
-        "AI in Sports",
-        "AI in Retail",
-        "Software Development",
-      ];
-      
-      const sliderContents = [
-        {
-          title: "OpenAI GPT-4",
-          description: "Explore how GPT-4 advances natural language processing with state-of-the-art text generation.",
-          image: "/4.jpeg", // Image URL aligned with the original setup
-        },
-        {
-          title: "Google BERT",
-          description: "Discover BERT's impact on understanding context and improving search engine performance.",
-          image: "/2.jpeg", // Image URL aligned with the original setup
-        },
-        {
-          title: "IBM Watson",
-          description: "Learn how IBM Watson is transforming business analytics and cognitive computing.",
-          image: "/10.jpeg", // Image URL aligned with the original setup
-        },
-        {
-          title: "DeepMind AlphaFold",
-          description: "Understand how AlphaFold is revolutionizing protein structure prediction and biological research.",
-          image: "/4.jpeg", // Image URL aligned with the original setup
-        },
-        {
-          title: "Microsoft Azure AI",
-          description: "See how Azure AI tools enable scalable machine learning and intelligent solutions in the cloud.",
-          image: "/5.jpeg", // Image URL aligned with the original setup
-        },
-        {
-          title: "Amazon SageMaker",
-          description: "Explore SageMaker's comprehensive suite for building, training, and deploying machine learning models.",
-          image: "/6.jpeg", // Image URL aligned with the original setup
-        },
-        {
-          title: "Hugging Face Transformers",
-          description: "Learn about the Transformers library and its role in advancing natural language understanding.",
-          image: "/7.jpeg", // Image URL aligned with the original setup
-        },
-        {
-          title: "OpenCV",
-          description: "Discover OpenCV’s capabilities for computer vision and image processing applications.",
-          image: "/8.jpeg", // Image URL aligned with the original setup
-        },
-        {
-          title: "TensorFlow",
-          description: "Understand TensorFlow’s role in developing and training deep learning models for various applications.",
-          image: "/9.jpeg", // Image URL aligned with the original setup
-        },
-        {
-          title: "PyTorch",
-          description: "See how PyTorch supports flexible and efficient deep learning research and model development.",
-          image: "/10.jpeg", // Image URL aligned with the original setup
-        },
-      ];
-      const CardsliderContent = [
-        {
           title: "AI Revolution",
-          description:
-            "Explore how AI is transforming industries across the globe.",
-          image: "/1.jpeg",
-          url:"tool/ai-revolution"
+          description: "Explore the advancements AI is making in multiple industries.",
+          image: "/10.jpeg",
+          url: "/ai-revolution"
         },
         {
-          title: "AI and Automation",
-          description: "Discover the future of work with AI-driven automation.",
+          title: "Next-Gen AI Models",
+          description: "Learn about the future models shaping AI research and applications.",
           image: "/2.jpeg",
-           url:"tool/ai-automation"
+          url: "/next-gen-ai"
         },
         {
           title: "AI in Healthcare",
-          description: "AI's impact on improving patient outcomes.",
-          image: "/3.jpeg",
-          url:"tool/ai-healthcare"
+          description: "Discover the potential of AI in transforming healthcare.",
+          image: "/4.jpeg",
+          url: "/ai-healthcare"
+        },
+        {
+          title: "AI and Automation",
+          description: "How AI is automating workflows and enhancing productivity.",
+          image: "/6.jpeg",
+          url: "/ai-automation"
+        },
+        {
+          title: "Cloud AI Solutions",
+          description: "Leverage cloud-based AI tools for scalable solutions.",
+          image: "/9.jpeg",
+          url: "/cloud-ai"
+        },
+        {
+          title: "AI for Developers",
+          description: "Explore AI tools tailored for software developers.",
+          image: "/7.jpeg",
+          url: "/ai-developers"
+        },
+        {
+          title: "Transformative AI Applications",
+          description: "Explore various applications of AI across industries.",
+          image: "/2.jpeg",
+          url: "/transformative-ai"
+        },
+        {
+          title: "AI in Vision Technologies",
+          description: "Learn how AI is advancing computer vision and image processing.",
+          image: "/1.jpeg",
+          url: "/ai-vision"
         },
         {
           title: "AI in Education",
-          description: "The future of personalized learning through AI.",
-          image: "/4.jpeg",
-          url:"tool/ai-education"
+          description: "Understand how AI is personalizing education experiences.",
+          image: "/9.jpeg",
+          url: "/ai-education"
         },
         {
-          title: "AI in Media",
-          description: "AI's role in the evolution of media consumption.",
-          image: "/5.jpeg",
-          url:"tool/ai-media"
-        },
-        {
-          title: "AI in Sports",
-          description: "How AI is revolutionizing sports analytics.",
+          title: "AI Research",
+          description: "Stay updated with cutting-edge AI research.",
           image: "/6.jpeg",
-          url:"tool/ai-sports"
+          url: "/ai-research"
+        }
+      ];
+
+    // Updated tabs for SlidingTabs
+    const tabs = [
+        "AI Revolution",
+        "Next-Gen AI",
+        "Healthcare AI",
+        "Automation",
+        "Cloud AI",
+        "AI for Developers",
+        "Transformative AI",
+        "Vision Technologies",
+        "AI in Education",
+        "AI Research"
+    ];
+
+    // Updated content for CustomSlider
+    const sliderContents = [
+        {
+          title: "AI in Healthcare",
+          description: "Discover AI's transformative role in enhancing healthcare services.",
+          image: "/4.jpeg",
+        },
+        {
+          title: "AI for Software Developers",
+          description: "Tools and platforms that make AI more accessible for developers.",
+          image: "/2.jpeg",
         },
         {
           title: "AI in Retail",
-          description: "Enhancing customer experiences with AI in retail.",
-          image: "/7.jpeg",
-           url:"tool/ai-retail"
+          description: "Explore how AI is optimizing retail and improving customer experiences.",
+          image: "/10.jpeg",
+        },
+        {
+          title: "AI-Powered Automation",
+          description: "Automation tools powered by AI to boost productivity and efficiency.",
+          image: "/4.jpeg",
         },
         {
           title: "AI in Finance",
-          description:
-            "AI's impact on financial decision-making and risk management.",
+          description: "Understand AI's role in shaping the future of finance and risk management.",
+          image: "/5.jpeg",
+        },
+        {
+          title: "AI for Education",
+          description: "Transforming education with personalized learning through AI.",
+          image: "/6.jpeg",
+        },
+        {
+          title: "Natural Language Processing (NLP)",
+          description: "Learn about the latest advancements in NLP models and applications.",
+          image: "/7.jpeg",
+        },
+        {
+          title: "AI for Computer Vision",
+          description: "How AI is revolutionizing the field of image recognition and analysis.",
           image: "/8.jpeg",
-           url:"tool/ai-retail"
+        },
+        {
+          title: "AI for Enterprise",
+          description: "Explore enterprise AI tools for business intelligence and decision-making.",
+          image: "/9.jpeg",
+        },
+        {
+          title: "AI in Sports",
+          description: "How AI is being used to enhance sports analytics and performance tracking.",
+          image: "/10.jpeg",
+        },
+    ];
+
+    // Updated content for CardSlider
+    const CardsliderContent = [
+        {
+          title: "AI in Manufacturing",
+          description: "Learn how AI is streamlining production and supply chains.",
+          image: "/1.jpeg",
+          url: "/tool/ai-manufacturing"
+        },
+        {
+          title: "AI and Sustainability",
+          description: "Discover AI's role in promoting sustainability and eco-friendly solutions.",
+          image: "/2.jpeg",
+          url: "/tool/ai-sustainability"
+        },
+        {
+          title: "AI in Education",
+          description: "AI’s impact on personalized learning and educational tools.",
+          image: "/3.jpeg",
+          url: "/tool/ai-education"
+        },
+        {
+          title: "AI for Media",
+          description: "Explore how AI is changing the landscape of media and content creation.",
+          image: "/4.jpeg",
+          url: "/tool/ai-media"
+        },
+        {
+          title: "AI in Retail",
+          description: "AI-driven solutions to enhance customer shopping experiences.",
+          image: "/5.jpeg",
+          url: "/tool/ai-retail"
+        },
+        {
+          title: "AI for Business",
+          description: "AI tools for improving business processes and decision-making.",
+          image: "/6.jpeg",
+          url: "/tool/ai-business"
+        },
+        {
+          title: "AI in Finance",
+          description: "How AI is reshaping financial services, investments, and risk management.",
+          image: "/7.jpeg",
+          url: "/tool/ai-finance"
         },
         {
           title: "AI in Transportation",
-          description: "Self-driving cars and the future of AI in transportation.",
+          description: "The future of AI in autonomous vehicles and logistics.",
+          image: "/8.jpeg",
+          url: "/tool/ai-transportation"
+        },
+        {
+          title: "AI for Social Good",
+          description: "Learn about AI initiatives aimed at solving global challenges.",
           image: "/9.jpeg",
-           url:"tool/ai-transportation"
+          url: "/tool/ai-social-good"
         },
         {
           title: "AI in Entertainment",
-          description: "AI's influence on content creation and entertainment.",
+          description: "AI's influence on content generation and user engagement in entertainment.",
           image: "/10.jpeg",
-           url:"tool/ai-entertainment"
+          url: "/tool/ai-entertainment"
         },
-      ];
-  return (
-    <div>
-      <HeroSlider
-        sliderContent={sliderContent}
-        darkMode={darkMode}
-      ></HeroSlider>
-      <SlidingTabs tabs={tabs} darkMode={darkMode}></SlidingTabs>
-      <CustomSlider sliderContent={sliderContents} darkMode={darkMode}></CustomSlider>
-      <CardSlider darkMode={darkMode}/>
-      <CardCategory CardsliderContent={CardsliderContent} mainTitle="Best AI Model" />
-    </div>
-  );
+    ];
+
+    return (
+      <div>
+        <HeroSlider sliderContent={sliderContent} darkMode={darkMode} />
+        <SlidingTabs tabs={tabs} darkMode={darkMode} />
+        <CustomSlider sliderContent={sliderContents} darkMode={darkMode} />
+        <CardSlider darkMode={darkMode} />
+        <CardCategory CardsliderContent={CardsliderContent} mainTitle="Best AI Models" />
+      </div>
+    );
 }
 
 export default AiLearning;

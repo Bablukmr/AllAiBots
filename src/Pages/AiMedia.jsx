@@ -8,214 +8,214 @@ import CardSlider from "../components/EsentialsTool";
 function AiMedia({ darkMode }) {
     const sliderContent = [
         {
-          title: "OpenAI GPT-4",
-          description: "Explore how GPT-4 is advancing natural language understanding and generation.",
+          title: "AI in Content Creation",
+          description: "Explore how AI is transforming content creation, from automated writing to video generation.",
           image: "/10.jpeg",
-          url: "/gpt4"
+          url: "/ai-content-creation"
         },
         {
-          title: "Google BERT",
-          description: "Discover how BERT enhances search engine capabilities and contextual understanding.",
+          title: "AI in Media Personalization",
+          description: "Learn how AI helps media platforms provide personalized recommendations and experiences.",
           image: "/2.jpeg",
-          url: "/bert"
+          url: "/ai-media-personalization"
         },
         {
-          title: "IBM Watson",
-          description: "Learn about IBM Watson's applications in AI-driven business solutions.",
+          title: "AI-Driven Advertising",
+          description: "Discover how AI is revolutionizing digital advertising through targeting and automation.",
           image: "/4.jpeg",
-          url: "/watson"
+          url: "/ai-advertising"
         },
         {
-          title: "DeepMind AlphaFold",
-          description: "Understand how AlphaFold is revolutionizing protein folding predictions.",
+          title: "AI in Video and Audio Editing",
+          description: "Understand how AI tools are enhancing video and audio editing with automated features.",
           image: "/6.jpeg",
-          url: "/alphafold"
+          url: "/ai-video-audio-editing"
         },
         {
-          title: "Microsoft Azure AI",
-          description: "See how Azure AI tools are transforming cloud-based AI solutions.",
+          title: "AI in Journalism",
+          description: "See how AI is assisting journalists by automating reporting and data analysis.",
           image: "/9.jpeg",
-          url: "/azure-ai"
+          url: "/ai-journalism"
         },
         {
-          title: "Amazon SageMaker",
-          description: "Explore SageMaker's capabilities for building, training, and deploying machine learning models.",
+          title: "AI in Social Media Analytics",
+          description: "Explore AI's role in analyzing social media trends and optimizing engagement strategies.",
           image: "/7.jpeg",
-          url: "/sagemaker"
+          url: "/ai-social-media"
         },
         {
-          title: "Hugging Face Transformers",
-          description: "Learn about the Transformers library and its impact on NLP tasks.",
+          title: "AI for Visual Effects (VFX)",
+          description: "Learn about AI’s impact on the VFX industry, automating complex visual tasks.",
           image: "/2.jpeg",
-          url: "/transformers"
+          url: "/ai-vfx"
         },
         {
-          title: "OpenCV",
-          description: "Discover how OpenCV is used for computer vision applications and image processing.",
+          title: "AI in Streaming Services",
+          description: "Discover how AI is optimizing streaming services by managing content delivery and bandwidth.",
           image: "/1.jpeg",
-          url: "/opencv"
+          url: "/ai-streaming"
         },
         {
-          title: "TensorFlow",
-          description: "Understand how TensorFlow is used for building and training machine learning models.",
+          title: "AI in Gaming",
+          description: "Understand how AI is enhancing game design, character behaviors, and player experiences.",
           image: "/9.jpeg",
-          url: "/tensorflow"
+          url: "/ai-gaming"
         },
         {
-          title: "PyTorch",
-          description: "See how PyTorch is enabling flexible and efficient deep learning research.",
+          title: "AI in Music Production",
+          description: "See how AI is influencing music production, from composing to mixing tracks.",
           image: "/6.jpeg",
-          url: "/pytorch"
+          url: "/ai-music-production"
         }
       ];
+
       const tabs = [
-        
         "AI Models",
-        "AI Tools",
-        "Datasets",
-        "Analytics",
-        "AI Research",
+        "AI in Media",
+        "AI in Content Creation",
+        "AI in Advertising",
+        "AI in Journalism",
+        "AI in Visual Effects",
+        "AI in Music",
+        "AI in Gaming",
+        "AI in Social Media",
+        "AI in Streaming",
+        "AI and Personalization",
+        "AI Applications",
         "Machine Learning",
         "Natural Language Processing",
         "Computer Vision",
-        "Deep Learning",
-        "AI Applications",
-        "AI in Media",
-        "AI in Healthcare",
-        "AI in Finance",
-        "AI in Sports",
-        "AI in Retail",
-        "Software Development",
+        "Deep Learning"
       ];
-      
+
       const sliderContents = [
         {
-          title: "OpenAI GPT-4",
-          description: "Explore how GPT-4 advances natural language processing with state-of-the-art text generation.",
-          image: "/4.jpeg", // Image URL aligned with the original setup
+          title: "AI in Content Creation",
+          description: "Explore AI tools that assist in creating written, visual, and video content.",
+          image: "/4.jpeg", // Image URL remains the same
         },
         {
-          title: "Google BERT",
-          description: "Discover BERT's impact on understanding context and improving search engine performance.",
-          image: "/2.jpeg", // Image URL aligned with the original setup
+          title: "AI in Personalization",
+          description: "Learn how AI enhances personalization on media platforms to deliver tailored content.",
+          image: "/2.jpeg", // Image URL remains the same
         },
         {
-          title: "IBM Watson",
-          description: "Learn how IBM Watson is transforming business analytics and cognitive computing.",
-          image: "/10.jpeg", // Image URL aligned with the original setup
+          title: "AI in Digital Advertising",
+          description: "Discover how AI optimizes ad targeting and automates ad placements.",
+          image: "/10.jpeg", // Image URL remains the same
         },
         {
-          title: "DeepMind AlphaFold",
-          description: "Understand how AlphaFold is revolutionizing protein structure prediction and biological research.",
-          image: "/4.jpeg", // Image URL aligned with the original setup
+          title: "AI in Video Editing",
+          description: "Understand the automation of video editing through AI, making production faster and more efficient.",
+          image: "/4.jpeg", // Image URL remains the same
         },
         {
-          title: "Microsoft Azure AI",
-          description: "See how Azure AI tools enable scalable machine learning and intelligent solutions in the cloud.",
-          image: "/5.jpeg", // Image URL aligned with the original setup
+          title: "AI in Social Media",
+          description: "See how AI helps analyze trends and optimize engagement on social media platforms.",
+          image: "/5.jpeg", // Image URL remains the same
         },
         {
-          title: "Amazon SageMaker",
-          description: "Explore SageMaker's comprehensive suite for building, training, and deploying machine learning models.",
-          image: "/6.jpeg", // Image URL aligned with the original setup
+          title: "AI in Journalism",
+          description: "Learn how AI assists journalists in automating data collection and report generation.",
+          image: "/6.jpeg", // Image URL remains the same
         },
         {
-          title: "Hugging Face Transformers",
-          description: "Learn about the Transformers library and its role in advancing natural language understanding.",
-          image: "/7.jpeg", // Image URL aligned with the original setup
+          title: "AI for VFX",
+          description: "Explore how AI streamlines complex visual effects workflows in film and media.",
+          image: "/7.jpeg", // Image URL remains the same
         },
         {
-          title: "OpenCV",
-          description: "Discover OpenCV’s capabilities for computer vision and image processing applications.",
-          image: "/8.jpeg", // Image URL aligned with the original setup
+          title: "AI in Music Production",
+          description: "See how AI is being used to compose music and mix tracks with minimal human intervention.",
+          image: "/8.jpeg", // Image URL remains the same
         },
         {
-          title: "TensorFlow",
-          description: "Understand TensorFlow’s role in developing and training deep learning models for various applications.",
-          image: "/9.jpeg", // Image URL aligned with the original setup
+          title: "AI in Gaming",
+          description: "Understand how AI enhances game dynamics, AI-driven NPC behaviors, and player interactions.",
+          image: "/9.jpeg", // Image URL remains the same
         },
         {
-          title: "PyTorch",
-          description: "See how PyTorch supports flexible and efficient deep learning research and model development.",
-          image: "/10.jpeg", // Image URL aligned with the original setup
-        },
+          title: "AI in Streaming",
+          description: "Discover AI’s role in managing content delivery and improving user experiences in streaming platforms.",
+          image: "/10.jpeg", // Image URL remains the same
+        }
       ];
+
       const CardsliderContent = [
         {
-          title: "AI Revolution",
-          description:
-            "Explore how AI is transforming industries across the globe.",
+          title: "AI in Content Creation",
+          description: "See how AI tools are helping create text, image, and video content in media.",
           image: "/1.jpeg",
-          url:"tool/ai-revolution"
+          url:"tool/ai-content-creation"
         },
         {
-          title: "AI and Automation",
-          description: "Discover the future of work with AI-driven automation.",
+          title: "AI in Advertising",
+          description: "Discover AI-driven digital advertising strategies that are transforming the industry.",
           image: "/2.jpeg",
-           url:"tool/ai-automation"
+          url:"tool/ai-advertising"
         },
         {
-          title: "AI in Healthcare",
-          description: "AI's impact on improving patient outcomes.",
+          title: "AI in Journalism",
+          description: "Learn about AI’s influence on journalism, from automated news reports to data-driven analysis.",
           image: "/3.jpeg",
-          url:"tool/ai-healthcare"
+          url:"tool/ai-journalism"
         },
         {
-          title: "AI in Education",
-          description: "The future of personalized learning through AI.",
+          title: "AI in Video Production",
+          description: "AI is automating video production, allowing faster editing and enhancing storytelling.",
           image: "/4.jpeg",
-          url:"tool/ai-education"
+          url:"tool/ai-video-production"
         },
         {
-          title: "AI in Media",
-          description: "AI's role in the evolution of media consumption.",
+          title: "AI in Music",
+          description: "AI in music composition and mixing is changing how we create and consume music.",
           image: "/5.jpeg",
-          url:"tool/ai-media"
+          url:"tool/ai-music"
         },
         {
-          title: "AI in Sports",
-          description: "How AI is revolutionizing sports analytics.",
+          title: "AI in Social Media",
+          description: "See how AI improves social media engagement and trend analysis.",
           image: "/6.jpeg",
-          url:"tool/ai-sports"
+          url:"tool/ai-social-media"
         },
         {
-          title: "AI in Retail",
-          description: "Enhancing customer experiences with AI in retail.",
+          title: "AI in Gaming",
+          description: "AI in gaming enhances player experiences through smarter NPCs and adaptive gameplay.",
           image: "/7.jpeg",
-           url:"tool/ai-retail"
+          url:"tool/ai-gaming"
         },
         {
-          title: "AI in Finance",
-          description:
-            "AI's impact on financial decision-making and risk management.",
+          title: "AI in Streaming",
+          description: "Understand how AI optimizes streaming content delivery and user experiences.",
           image: "/8.jpeg",
-           url:"tool/ai-retail"
+          url:"tool/ai-streaming"
         },
         {
-          title: "AI in Transportation",
-          description: "Self-driving cars and the future of AI in transportation.",
+          title: "AI in Visual Effects",
+          description: "Discover how AI streamlines VFX workflows and enhances visual storytelling.",
           image: "/9.jpeg",
-           url:"tool/ai-transportation"
+          url:"tool/ai-vfx"
         },
         {
-          title: "AI in Entertainment",
-          description: "AI's influence on content creation and entertainment.",
+          title: "AI in Media Analytics",
+          description: "Learn about AI’s role in analyzing media consumption patterns and optimizing content strategies.",
           image: "/10.jpeg",
-           url:"tool/ai-entertainment"
+          url:"tool/ai-media-analytics"
         },
       ];
-  return (
-    <div>
-      <HeroSlider
-        sliderContent={sliderContent}
-        darkMode={darkMode}
-      ></HeroSlider>
-      <SlidingTabs tabs={tabs} darkMode={darkMode}></SlidingTabs>
-      <CustomSlider sliderContent={sliderContents} darkMode={darkMode}></CustomSlider>
-      <CardSlider darkMode={darkMode}/>
-      <CardCategory CardsliderContent={CardsliderContent} mainTitle="Best AI Model" />
-    </div>
-  );
+
+    return (
+      <div>
+        <HeroSlider
+          sliderContent={sliderContent}
+          darkMode={darkMode}
+        ></HeroSlider>
+        <SlidingTabs tabs={tabs} darkMode={darkMode}></SlidingTabs>
+        <CustomSlider sliderContent={sliderContents} darkMode={darkMode}></CustomSlider>
+        <CardSlider darkMode={darkMode}/>
+        <CardCategory CardsliderContent={CardsliderContent} mainTitle="AI in Media Applications" />
+      </div>
+    );
 }
 
 export default AiMedia;
