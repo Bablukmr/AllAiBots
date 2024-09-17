@@ -8,212 +8,139 @@ import CardSlider from "../components/EsentialsTool";
 function AiSports({ darkMode }) {
     const sliderContent = [
         {
-          title: "OpenAI GPT-4",
-          description: "Explore how GPT-4 is advancing natural language understanding and generation.",
+          title: "AI in Football",
+          description: "Explore how AI is being used for game strategy and player performance analysis in football.",
           image: "/10.jpeg",
-          url: "/gpt4"
+          url: "/ai-football"
         },
         {
-          title: "Google BERT",
-          description: "Discover how BERT enhances search engine capabilities and contextual understanding.",
+          title: "AI in Basketball",
+          description: "Discover how AI is enhancing shooting accuracy and player efficiency in basketball.",
           image: "/2.jpeg",
-          url: "/bert"
+          url: "/ai-basketball"
         },
         {
-          title: "IBM Watson",
-          description: "Learn about IBM Watson's applications in AI-driven business solutions.",
+          title: "AI in Tennis",
+          description: "Learn about AI's role in analyzing player movements and improving match predictions in tennis.",
           image: "/4.jpeg",
-          url: "/watson"
+          url: "/ai-tennis"
         },
         {
-          title: "DeepMind AlphaFold",
-          description: "Understand how AlphaFold is revolutionizing protein folding predictions.",
+          title: "AI in Cricket",
+          description: "Understand how AI is revolutionizing team selection and performance analysis in cricket.",
           image: "/6.jpeg",
-          url: "/alphafold"
+          url: "/ai-cricket"
         },
         {
-          title: "Microsoft Azure AI",
-          description: "See how Azure AI tools are transforming cloud-based AI solutions.",
+          title: "AI in Racing",
+          description: "See how AI is optimizing race car performance and strategy in Formula 1 racing.",
           image: "/9.jpeg",
-          url: "/azure-ai"
+          url: "/ai-racing"
         },
         {
-          title: "Amazon SageMaker",
-          description: "Explore SageMaker's capabilities for building, training, and deploying machine learning models.",
+          title: "AI in eSports",
+          description: "Explore the rise of AI in eSports for player training and competition analysis.",
           image: "/7.jpeg",
-          url: "/sagemaker"
-        },
-        {
-          title: "Hugging Face Transformers",
-          description: "Learn about the Transformers library and its impact on NLP tasks.",
-          image: "/2.jpeg",
-          url: "/transformers"
-        },
-        {
-          title: "OpenCV",
-          description: "Discover how OpenCV is used for computer vision applications and image processing.",
-          image: "/1.jpeg",
-          url: "/opencv"
-        },
-        {
-          title: "TensorFlow",
-          description: "Understand how TensorFlow is used for building and training machine learning models.",
-          image: "/9.jpeg",
-          url: "/tensorflow"
-        },
-        {
-          title: "PyTorch",
-          description: "See how PyTorch is enabling flexible and efficient deep learning research.",
-          image: "/6.jpeg",
-          url: "/pytorch"
+          url: "/ai-esports"
         }
       ];
-      const tabs = [
-        
-        "AI Models",
-        "AI Tools",
-        "Datasets",
-        "Analytics",
-        "AI Research",
-        "Machine Learning",
-        "Natural Language Processing",
-        "Computer Vision",
-        "Deep Learning",
-        "AI Applications",
-        "AI in Media",
-        "AI in Healthcare",
-        "AI in Finance",
-        "AI in Sports",
-        "AI in Retail",
-        "Software Development",
+
+    const tabs = [
+        "AI in Football",
+        "AI in Basketball",
+        "AI in Tennis",
+        "AI in Cricket",
+        "AI in Racing",
+        "AI in eSports",
+        "AI in Performance Analysis",
+        "AI in Sports Broadcasting",
+        "AI in Wearable Technology",
+        "AI in Injury Prevention",
       ];
-      
-      const sliderContents = [
+
+    const sliderContents = [
         {
-          title: "OpenAI GPT-4",
-          description: "Explore how GPT-4 advances natural language processing with state-of-the-art text generation.",
-          image: "/4.jpeg", // Image URL aligned with the original setup
-        },
-        {
-          title: "Google BERT",
-          description: "Discover BERT's impact on understanding context and improving search engine performance.",
-          image: "/2.jpeg", // Image URL aligned with the original setup
-        },
-        {
-          title: "IBM Watson",
-          description: "Learn how IBM Watson is transforming business analytics and cognitive computing.",
-          image: "/10.jpeg", // Image URL aligned with the original setup
-        },
-        {
-          title: "DeepMind AlphaFold",
-          description: "Understand how AlphaFold is revolutionizing protein structure prediction and biological research.",
-          image: "/4.jpeg", // Image URL aligned with the original setup
-        },
-        {
-          title: "Microsoft Azure AI",
-          description: "See how Azure AI tools enable scalable machine learning and intelligent solutions in the cloud.",
-          image: "/5.jpeg", // Image URL aligned with the original setup
-        },
-        {
-          title: "Amazon SageMaker",
-          description: "Explore SageMaker's comprehensive suite for building, training, and deploying machine learning models.",
-          image: "/6.jpeg", // Image URL aligned with the original setup
-        },
-        {
-          title: "Hugging Face Transformers",
-          description: "Learn about the Transformers library and its role in advancing natural language understanding.",
-          image: "/7.jpeg", // Image URL aligned with the original setup
-        },
-        {
-          title: "OpenCV",
-          description: "Discover OpenCV’s capabilities for computer vision and image processing applications.",
-          image: "/8.jpeg", // Image URL aligned with the original setup
-        },
-        {
-          title: "TensorFlow",
-          description: "Understand TensorFlow’s role in developing and training deep learning models for various applications.",
-          image: "/9.jpeg", // Image URL aligned with the original setup
-        },
-        {
-          title: "PyTorch",
-          description: "See how PyTorch supports flexible and efficient deep learning research and model development.",
-          image: "/10.jpeg", // Image URL aligned with the original setup
-        },
-      ];
-      const CardsliderContent = [
-        {
-          title: "AI Revolution",
-          description:
-            "Explore how AI is transforming industries across the globe.",
-          image: "/1.jpeg",
-          url:"tool/ai-revolution"
-        },
-        {
-          title: "AI and Automation",
-          description: "Discover the future of work with AI-driven automation.",
-          image: "/2.jpeg",
-           url:"tool/ai-automation"
-        },
-        {
-          title: "AI in Healthcare",
-          description: "AI's impact on improving patient outcomes.",
-          image: "/3.jpeg",
-          url:"tool/ai-healthcare"
-        },
-        {
-          title: "AI in Education",
-          description: "The future of personalized learning through AI.",
+          title: "AI in Football",
+          description: "Explore how AI is used to analyze player performance and optimize game strategies in football.",
           image: "/4.jpeg",
-          url:"tool/ai-education"
         },
         {
-          title: "AI in Media",
-          description: "AI's role in the evolution of media consumption.",
-          image: "/5.jpeg",
-          url:"tool/ai-media"
+          title: "AI in Basketball",
+          description: "Discover how AI enhances player shooting accuracy and team efficiency in basketball.",
+          image: "/2.jpeg",
         },
         {
-          title: "AI in Sports",
-          description: "How AI is revolutionizing sports analytics.",
-          image: "/6.jpeg",
-          url:"tool/ai-sports"
-        },
-        {
-          title: "AI in Retail",
-          description: "Enhancing customer experiences with AI in retail.",
-          image: "/7.jpeg",
-           url:"tool/ai-retail"
-        },
-        {
-          title: "AI in Finance",
-          description:
-            "AI's impact on financial decision-making and risk management.",
-          image: "/8.jpeg",
-           url:"tool/ai-retail"
-        },
-        {
-          title: "AI in Transportation",
-          description: "Self-driving cars and the future of AI in transportation.",
-          image: "/9.jpeg",
-           url:"tool/ai-transportation"
-        },
-        {
-          title: "AI in Entertainment",
-          description: "AI's influence on content creation and entertainment.",
+          title: "AI in Tennis",
+          description: "Learn how AI technology is used to analyze player movements and improve game predictions.",
           image: "/10.jpeg",
-           url:"tool/ai-entertainment"
+        },
+        {
+          title: "AI in Cricket",
+          description: "Understand AI’s role in optimizing team selection and analyzing player performance in cricket.",
+          image: "/4.jpeg",
+        },
+        {
+          title: "AI in Racing",
+          description: "See how AI helps optimize vehicle performance and strategy in competitive racing.",
+          image: "/5.jpeg",
+        },
+        {
+          title: "AI in eSports",
+          description: "Explore how AI is transforming player training and game strategy in the fast-growing world of eSports.",
+          image: "/6.jpeg",
         },
       ];
+
+    const CardsliderContent = [
+        {
+          title: "AI in Football",
+          description: "AI's impact on performance analysis and strategy optimization in football.",
+          image: "/1.jpeg",
+          url:"tool/ai-football"
+        },
+        {
+          title: "AI in Basketball",
+          description: "Discover AI’s role in player training and game performance analysis in basketball.",
+          image: "/2.jpeg",
+          url:"tool/ai-basketball"
+        },
+        {
+          title: "AI in Tennis",
+          description: "AI's influence on predicting match outcomes and analyzing player movements in tennis.",
+          image: "/3.jpeg",
+          url:"tool/ai-tennis"
+        },
+        {
+          title: "AI in Cricket",
+          description: "AI's role in team performance and player selection analysis in cricket.",
+          image: "/4.jpeg",
+          url:"tool/ai-cricket"
+        },
+        {
+          title: "AI in eSports",
+          description: "How AI is transforming training and strategy in the world of eSports.",
+          image: "/5.jpeg",
+          url:"tool/ai-esports"
+        },
+        {
+          title: "AI in Racing",
+          description: "How AI is improving race car performance and race strategy.",
+          image: "/6.jpeg",
+          url:"tool/ai-racing"
+        }
+      ];
+
   return (
     <div>
       <HeroSlider
+      
         sliderContent={sliderContent}
         darkMode={darkMode}
       ></HeroSlider>
       <SlidingTabs tabs={tabs} darkMode={darkMode}></SlidingTabs>
       <CustomSlider sliderContent={sliderContents} darkMode={darkMode}></CustomSlider>
       <CardSlider darkMode={darkMode}/>
-      <CardCategory CardsliderContent={CardsliderContent} mainTitle="Best AI Model" />
+      <CardCategory CardsliderContent={CardsliderContent} mainTitle="AI in Sports" />
     </div>
   );
 }
